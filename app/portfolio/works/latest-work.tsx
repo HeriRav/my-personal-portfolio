@@ -12,13 +12,14 @@ export function LatestProject() {
             src={ph_1}
             alt={""}
             className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
+            fetchPriority="low"
           />
         </div>
         <div className="flex flex-col p-4 pb-4">
-          <h5 className="text-primary font-bold text-lg truncate">
-            My latest project
+          <h5 className="text-primary dark:text-foreground font-bold text-lg truncate">
+            My latest work
           </h5>
-          <h6 className="text-secondary font-semibold truncate">
+          <h6 className="text-secondary dark:text-foreground/80 font-semibold truncate">
             Zeno - Landing page
           </h6>
           <p className="text-sm font-semibold line-clamp-3">

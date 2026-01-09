@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 
 interface AgeCalculatorProps {
@@ -29,7 +31,7 @@ const AgeCalculator: React.FC<AgeCalculatorProps> = ({ birthDate }) => {
     return () => clearInterval(interval);
   }, [birthDate]);
 
-  return <span>({age} ans)</span>;
+  return <span>{age} ans</span>;
 };
 
 export default AgeCalculator;

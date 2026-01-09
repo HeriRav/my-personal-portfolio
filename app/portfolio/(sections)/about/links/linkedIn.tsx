@@ -2,14 +2,15 @@ export default function LinkedIn() {
   return (
     <svg
       fill="#0A66C2"
-      height="35px"
-      width="35px"
+      height="30px"
+      width="30px"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="-143 145 512 512"
       xmlSpace="preserve"
+      className="bg-white rounded-full"
     >
       <path
         d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
