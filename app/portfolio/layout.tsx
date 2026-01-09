@@ -5,8 +5,8 @@ export default function Layout(props: PropsWithChildren) {
   return (
     <>
       <Header />
-      <div className="h-px w-full bg-linear-to-r from-transparent via-dark-accent to-transparent my-6 mt-28 md:mt-20"></div>
-      <div className="flex flex-col gap-4 px-4 md:px-32 max-w-337.5">
+      <div className="h-px w-full bg-foreground/50 my-6 mt-28 md:mt-20"></div>
+      <div className="flex flex-col dark:bg-[#28292a] gap-4 px-4 md:px-32 3xl:px-64 mx-auto 3xl:mx-0 max-w-337.5 3xl:max-w-400">
         {props.children}
       </div>
     </>

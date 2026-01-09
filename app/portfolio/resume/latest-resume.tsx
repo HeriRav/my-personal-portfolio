@@ -7,8 +7,10 @@ export function LatestResume() {
       <Link href="/">
         <CardContent className="p-0">
           <div className="p-4">
-            <h5 className="text-primary font-bold">My latest diploma</h5>
-            <h6 className="text-secondary font-semibold truncate">
+            <h5 className="text-primary dark:text-foreground font-bold">
+              My latest diploma
+            </h5>
+            <h6 className="text-secondary dark:text-foreground/80 font-semibold truncate">
               RNCP Level 6 certification, equivalent to the first year of a
               Master&apos;s degree
             </h6>
