@@ -101,7 +101,10 @@ export function Header() {
               </Link>
             </Button>
 
-            <Button asChild className="dark:bg-foreground">
+            <Button
+              asChild
+              className="dark:bg-foreground hover:dark:bg-foreground/80 transition"
+            >
               <Link href="/register">
                 <UserPlus size={16} />
                 Sign up
@@ -125,12 +128,12 @@ export function Header() {
               <div className="relative w-full">
                 <Button
                   onClick={() => setLangOpen(!langOpen)}
-                  className="w-full px-4 py-2 border border-accent dark:border-white bg-primary dark:bg-foreground rounded-full hover:bg-primary/80 hover:scale-105 transition cursor-pointer text-background"
+                  className="w-full px-4 py-2 border border-accent dark:border-white bg-primary dark:bg-foreground rounded-full hover:bg-primary/80 hover:scale-105 transition cursor-pointer text-background overflow-hidden"
                 >
                   {lang}
                 </Button>
                 {langOpen && (
-                  <div className="absolute right-0 mt-2 w-24 bg-background border rounded-md shadow-md flex flex-col">
+                  <div className="absolute right-0 mt-2 w-24 bg-background border border-foreground rounded-md shadow-md flex flex-col overflow-hidden">
                     {["FR", "EN", "MG"].map((l) => (
                       <button
                         key={l}
@@ -157,7 +160,7 @@ export function Header() {
                 href="/login"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 px-4 py-2 rounded-full
-                     bg-background border shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
+                     bg-background border border-foreground shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
               >
                 <LogIn size={16} />
                 Sign in

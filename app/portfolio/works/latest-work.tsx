@@ -22,13 +22,16 @@ export function LatestProject() {
           <h6 className="text-secondary dark:text-foreground/80 font-semibold truncate">
             Zeno - Landing page
           </h6>
-          <p className="text-sm font-semibold line-clamp-3">
+          <p className="text-sm font-light line-clamp-3">
             Showcase site for Zeno. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Ab, perferendis cupiditate, molestias, odio maxime
             quod at quos mollitia eaque asperiores quis id sequi aliquid ut!
             Expedita quos ratione accusamus in.
           </p>
-          <Link href="/" className="mt-auto ml-auto hover:underline pt-1">
+          <Link
+            href="/portfolio/works"
+            className="mt-auto ml-auto hover:underline pt-1"
+          >
             See all
           </Link>
         </div>

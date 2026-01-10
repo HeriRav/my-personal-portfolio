@@ -1,4 +1,3 @@
-import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
 import { Search } from "lucide-react";
 import Link from "next/link";
@@ -23,17 +22,12 @@ export default function Home() {
           <Search size={20} />
         </Link>
       </div>
-      <Button
-        className="hover:scale-105 duration-300 transition-all cursor-pointer rounded-md"
-        variant="outline"
+      <Link
+        href="/portfolio"
+        className="border border-transparent bg-accent dark:bg-dark-accent px-4 py-2 hover:scale-105 duration-300 transition-all cursor-pointer rounded-md font-semibold text-base text-foreground"
       >
-        <Link
-          href="/portfolio"
-          className="font-semibold text-base dark:text-white"
-        >
-          Search
-        </Link>
-      </Button>
+        Search
+      </Link>
     </div>
   );
 }
