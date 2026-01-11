@@ -1,26 +1,33 @@
-import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
+import { Search } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center gap-y-8">
-      <h1 className="flex font-bold text-center text-7xl">My Portfolio</h1>
-      <div className="w-80 md:w-full lg:px-28 xl:px-48 2xl:px-72">
+      <h1 className="flex font-bold text-center text-7xl text-transparent! bg-clip-text bg-linear-to-b md:bg-linear-to-r from-primary dark:from-foreground md:from-30% lg:from-40% 2xl:from-50% to-secondary dark:to-accent">
+        Heritiana
+      </h1>
+      <div className="relative mx-auto w-1/2 min-w-80 max-w-120">
         <Input
-          className="rounded-full border focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none h-12"
-          readOnly
+          className="py-6 rounded-full bg-accent border border-transparent hover:bg-accent/70 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none h-12 px-4 transition-colors duration-150"
           value="Heritiana Raveloson"
+          readOnly
         />
-      </div>
-      <Button
-        className="hover:scale-105 duration-300 transition-all cursor-pointer rounded-xl"
-        variant="outline"
-      >
-        <Link href="/portfolio" className="font-bold text-base">
-          Search Portfolio
+        <Link
+          href="/portfolio"
+          className="absolute right-4 top-1/2 -translate-y-1/2
+               text-muted-foreground hover:text-primary transition"
+        >
+          <Search size={20} />
         </Link>
-      </Button>
+      </div>
+      <Link
+        href="/portfolio"
+        className="border border-transparent bg-accent dark:bg-dark-accent px-4 py-2 hover:scale-105 duration-300 transition-all cursor-pointer rounded-md font-semibold text-base text-foreground"
+      >
+        Search
+      </Link>
     </div>
   );
 }
