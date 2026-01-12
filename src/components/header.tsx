@@ -6,6 +6,9 @@ import Link from "next/link";
 import { LogIn, Search, User, UserPlus, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTheme } from "../hooks/useTheme";
+import enFlag from "@/public/icons/enFlag";
+import frFlag from "@/public/icons/frFlag";
+import mgFlag from "@/public/icons/mgFlag";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,6 +30,12 @@ export function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const languages = [
+    { code: "EN", label: "English", Flag: enFlag },
+    { code: "FR", label: "Français", Flag: frFlag },
+    { code: "MG", label: "Malagasy", Flag: mgFlag },
+  ];
 
   return (
     <>
@@ -70,14 +79,15 @@ export function Header() {
                 {lang}
               </Button>
               {langOpen && (
-                <div className="absolute right-0 mt-2 w-24 bg-background border rounded-md shadow-md flex flex-col">
-                  {["FR", "EN", "ES"].map((l) => (
+                <div className="absolute right-0 mt-2 w-32 bg-background border rounded-md shadow-md flex flex-col">
+                  {languages.map(({ code, Flag }) => (
                     <button
-                      key={l}
-                      onClick={() => changeLang(l)}
-                      className="px-4 py-2 hover:bg-muted hover:dark:bg-black text-left cursor-pointer"
+                      key={code}
+                      onClick={() => changeLang(code)}
+                      className="px-4 py-2 hover:bg-muted hover:dark:bg-black text-left cursor-pointer flex items-center gap-2"
                     >
-                      {l}
+                      <Flag />
+                      <span>{code}</span>
                     </button>
                   ))}
                 </div>

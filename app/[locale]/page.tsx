@@ -1,8 +1,11 @@
+import { getI18n } from "@/locales/server";
 import { Input } from "@/src/components/ui/input";
 import { Search } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getI18n();
+
   return (
     <div className="flex flex-col min-h-screen items-center justify-center gap-y-8">
       <h1 className="flex font-bold text-center text-7xl text-transparent! bg-clip-text bg-linear-to-b md:bg-linear-to-r from-primary dark:from-foreground md:from-30% lg:from-40% 2xl:from-50% to-secondary dark:to-accent">
@@ -26,7 +29,7 @@ export default function Home() {
         href="/portfolio"
         className="border border-transparent bg-accent dark:bg-dark-accent px-4 py-2 hover:scale-105 duration-300 transition-all cursor-pointer rounded-md font-semibold text-base text-foreground"
       >
-        Search
+        {t("search")}
       </Link>
     </div>
   );

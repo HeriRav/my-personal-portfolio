@@ -2,11 +2,12 @@
 
 import { Button } from "@/src/components/ui/button";
 import { useState } from "react";
-import AgeCalculator from "./age/age-calculator";
 import LinkedIn from "./links/linkedIn";
 import Link from "next/link";
 import GitHub from "./links/github";
 import Reference from "./reference/reference";
+import PersonalInfo from "./info/personal-info";
+import { useI18n } from "@/locales/client";
 
 const links = [
   {
@@ -17,16 +18,17 @@ const links = [
 
 export default function AboutMainPage() {
   const [showMore, setShowMore] = useState(false);
+  const t = useI18n();
 
   return (
     <div className="max-w-full lg:max-w-80 xl:max-w-100 w-full">
       <div className="w-full">
         <h5 className="text-xl text-primary dark:text-foreground font-bold">
-          About me
+          {t("about_me")}
         </h5>
 
         <h6 className="text-base text-dark-accent/70 dark:text-foreground/80 font-semibold py-1">
-          Software developer | Passionate about Innovation and New Challenges
+          {t("developer")} | {t("passion")}
         </h6>
 
         <p className="text-sm font-light">
@@ -66,60 +68,7 @@ export default function AboutMainPage() {
             )}
           </p>
         </div>
-        <div className="py-2">
-          <div className="text-sm py-1">
-            <p className="font-semibold">
-              <span className="text-foreground">Date/Place of birth :</span>
-              <span className="font-light pl-1">
-                27 Novembre 1997 (Age:&nbsp;
-                <AgeCalculator birthDate="1997-11-27" />
-                ), Ankadifotsy, Analamanga, Antananarivo, Madagascar
-              </span>
-            </p>
-          </div>
-          <div className="text-sm py-1">
-            <p className="font-semibold">
-              <span className="text-foreground">University :</span>
-              <span className="font-light pl-1">
-                Regional University Space of the Indian Ocean (EUROI)
-              </span>
-            </p>
-          </div>
-          <div className="text-sm py-1">
-            <p className="font-semibold">
-              <span className="text-foreground">Localization :</span>
-              <span className="font-light pl-1">
-                Antananarivo 103, Madagascar
-              </span>
-            </p>
-          </div>
-          <div className="text-sm py-1">
-            <p className="font-semibold">
-              <span className="text-foreground">Email :</span>
-              <span className="font-light pl-1">
-                <a
-                  href="mailto:heriravel00@gmail.com"
-                  className="text-primary hover:underline transition-all duration-150"
-                >
-                  heriravel00@gmail.com
-                </a>
-              </span>
-            </p>
-          </div>
-          <div className="text-sm py-1">
-            <p className="font-semibold">
-              <span className="text-foreground">Phone number :</span>
-              <span className="font-light pl-1">
-                <a
-                  href="tel:+261347776896"
-                  className="text-primary hover:underline transition-all duration-150"
-                >
-                  +261 34 77 768 96
-                </a>
-              </span>
-            </p>
-          </div>
-        </div>
+        <PersonalInfo />
       </div>
       <div className="mx-auto h-px w-full bg-dark-accent dark:bg-foreground my-6"></div>
       <div className="w-full my-4">

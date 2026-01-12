@@ -32,7 +32,7 @@ export function LatestProject() {
             href="/portfolio/works"
             className="mt-auto ml-auto hover:underline pt-1"
           >
-            See all
+            View all
           </Link>
         </div>
       </CardContent>
