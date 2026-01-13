@@ -7,7 +7,7 @@ import Link from "next/link";
 import GitHub from "./links/github";
 import Reference from "./reference/reference";
 import PersonalInfo from "./info/personal-info";
-import { useI18n } from "@/locales/client";
+import { useI18n, useScopedI18n } from "@/locales/client";
 
 const links = [
   {
@@ -19,30 +19,28 @@ const links = [
 export default function AboutMainPage() {
   const [showMore, setShowMore] = useState(false);
   const t = useI18n();
+  const landingT = useScopedI18n("landing.about");
 
   return (
     <div className="max-w-full lg:max-w-80 xl:max-w-100 w-full">
       <div className="w-full">
         <h5 className="text-xl text-primary dark:text-foreground font-bold">
-          {t("about_me")}
+          {landingT("title")}
         </h5>
 
         <h6 className="text-base text-dark-accent/70 dark:text-foreground/80 font-semibold py-1">
-          {t("developer")} | {t("passion")}
+          {t("developer")} | {landingT("passion")}
         </h6>
 
         <p className="text-sm font-light">
-          Specialized in front-end development with back-end knowledge, I design
-          intuitive and high-performance user interfaces. My expertise in
-          JavaScript/TypeScript, and Java allows me to transform creative ideas
-          into responsive web applications.
+          {landingT("description")}
           {!showMore && (
             <Button
               variant="link"
               className="h-1 inline-flex align-baseline hover:no-underline -px-1 text-primary cursor-pointer"
               onClick={() => setShowMore(true)}
             >
-              ... Show more
+              {landingT("show_more")}
             </Button>
           )}
         </p>
@@ -53,17 +51,14 @@ export default function AboutMainPage() {
           }`}
         >
           <p className="text-sm font-light my-1 last:mb-0">
-            Always on the lookout for the latest innovations, I strive to
-            continuously improve my skills. I optimize performance and
-            experiment with new approaches to create quality solutions that meet
-            user needs.
+            {landingT("motivation")}
             {showMore && (
               <Button
                 variant="link"
-                className="h-1 inline-flex align-baseline hover:no-underline px-1 text-primary cursor-pointer"
+                className="h-1 inline-flex align-baseline hover:no-underline -px-1 text-primary cursor-pointer"
                 onClick={() => setShowMore(false)}
               >
-                Show less
+                {landingT("show_less")}
               </Button>
             )}
           </p>

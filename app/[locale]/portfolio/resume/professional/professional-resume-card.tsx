@@ -1,10 +1,15 @@
+"use client";
+
 import { Card, CardTitle, CardContent } from "@/src/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import ph_2 from "@/public/images/placeholder_2.jpg";
 import { ArrowRight, Award, BriefcaseBusiness, Calendar } from "lucide-react";
+import { useScopedI18n } from "@/locales/client";
 
 export function ProfessionalResumeCard() {
+  const resumeT = useScopedI18n("resume.professional.card");
+
   return (
     <Card className="w-full overflow-hidden hover:shadow-lg hover:dark:shadow-gray-600 hover:scale-105 transition-all duration-300 py-0">
       <CardTitle className="px-0">
@@ -23,13 +28,13 @@ export function ProfessionalResumeCard() {
           <div className="text-center mb-8 border-b border-accent pb-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent text-primary rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
-              <span>Professional Journey</span>
+              <span>{resumeT("journey")}</span>
             </div>
-            <h3 className="text-3xl font-bold text-foreground mb-2">
-              My Latest Experience
+            <h3 className="text-lg xl:text-3xl font-bold text-foreground mb-2">
+              {resumeT("title")}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              A Professional experience & Career Growth
+            <p className="text-xs md:text-base text-gray-600 dark:text-gray-400">
+              {resumeT("description")}
             </p>
           </div>
 
@@ -39,11 +44,11 @@ export function ProfessionalResumeCard() {
                 <BriefcaseBusiness className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
-                <h4 className="text-xl text-primary font-semibold dark:text-white mb-1">
-                  Zeno Inno
+                <h4 className="text-xl text-secondary font-semibold mb-1">
+                  {resumeT("name")} - {resumeT("contract")}
                 </h4>
-                <p className="text-dark-accent/70 dark:text-gray-400 leading-relaxed">
-                  Software Developer - Full time
+                <p className="text-xs md:text-sm xl:text-base text-dark-accent/70 dark:text-gray-400 leading-relaxed">
+                  {resumeT("function")} - {resumeT("time")}
                 </p>
               </div>
             </div>
@@ -51,7 +56,7 @@ export function ProfessionalResumeCard() {
             <div className="flex items-center gap-3 pl-0 md:pl-16 lg:pl-0 xl:pl-16">
               <Calendar className="w-5 h-5 text-gray-400" />
               <span className="text-dark-accent/70 dark:text-gray-400">
-                August 2024 - Ongoing
+                {resumeT("date")}
               </span>
             </div>
           </div>
@@ -63,7 +68,7 @@ export function ProfessionalResumeCard() {
             href="/portfolio/resume/professional"
             className="group/link inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
           >
-            <span>View Full Professional Resume</span>
+            <span>{resumeT("view_all")}</span>
             <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
           </Link>
         </div>

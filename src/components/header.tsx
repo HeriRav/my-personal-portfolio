@@ -6,21 +6,12 @@ import Link from "next/link";
 import { LogIn, Search, User, UserPlus, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTheme } from "../hooks/useTheme";
-import enFlag from "@/public/icons/enFlag";
-import frFlag from "@/public/icons/frFlag";
-import mgFlag from "@/public/icons/mgFlag";
+import { LocaleSelect } from "@/app/[locale]/LocaleSelect";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const [lang, setLang] = useState("FR");
   const { theme, toggleTheme } = useTheme();
-
-  const changeLang = (newLang: string) => {
-    setLang(newLang);
-    setLangOpen(false);
-  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -30,12 +21,6 @@ export function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const languages = [
-    { code: "EN", label: "English", Flag: enFlag },
-    { code: "FR", label: "Français", Flag: frFlag },
-    { code: "MG", label: "Malagasy", Flag: mgFlag },
-  ];
 
   return (
     <>
@@ -71,28 +56,7 @@ export function Header() {
 
           <div className="ml-auto hidden lg:flex items-center gap-3">
             {/* Langue Dropdown */}
-            <div className="relative">
-              <Button
-                onClick={() => setLangOpen(!langOpen)}
-                className="px-4 py-3 border border-dark-accent dark:border-white bg-transparent rounded-full hover:bg-foreground/20 dark:hover:bg-background/80 transition cursor-pointer text-foreground"
-              >
-                {lang}
-              </Button>
-              {langOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-background border rounded-md shadow-md flex flex-col">
-                  {languages.map(({ code, Flag }) => (
-                    <button
-                      key={code}
-                      onClick={() => changeLang(code)}
-                      className="px-4 py-2 hover:bg-muted hover:dark:bg-black text-left cursor-pointer flex items-center gap-2"
-                    >
-                      <Flag />
-                      <span>{code}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <LocaleSelect />
 
             {/* Mode Clair/Sombre */}
             <Button
@@ -125,7 +89,7 @@ export function Header() {
       </header>
 
       {/* MOBILE AUTH FAB */}
-      <div className="lg:hidden fixed bottom-6 right-6 z-50">
+      <div className="lg:hidden fixed bottom-6 right-6 z-99">
         <div className="relative">
           {/* Options */}
           {open && (
@@ -135,26 +99,8 @@ export function Header() {
                       animate-in fade-in zoom-in"
             >
               {/* Langue */}
-              <div className="relative w-full">
-                <Button
-                  onClick={() => setLangOpen(!langOpen)}
-                  className="w-full px-4 py-2 border border-accent dark:border-white bg-primary dark:bg-foreground rounded-full hover:bg-primary/80 hover:scale-105 transition cursor-pointer text-background overflow-hidden"
-                >
-                  {lang}
-                </Button>
-                {langOpen && (
-                  <div className="absolute right-0 mt-2 w-24 bg-background border border-foreground rounded-md shadow-md flex flex-col overflow-hidden">
-                    {["FR", "EN", "MG"].map((l) => (
-                      <button
-                        key={l}
-                        onClick={() => changeLang(l)}
-                        className="px-4 py-2 hover:bg-muted text-left cursor-pointer"
-                      >
-                        {l}
-                      </button>
-                    ))}
-                  </div>
-                )}
+              <div className="w-full hover:scale-105 transition-all">
+                <LocaleSelect />
               </div>
 
               {/* Mode clair/sombre */}
@@ -180,7 +126,7 @@ export function Header() {
                 href="/register"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 px-4 py-2 rounded-full
-                     bg-primary dark:bg-foreground text-primary-foreground shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
+                     bg-primary border border-primary dark:bg-foreground text-primary-foreground shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
               >
                 <UserPlus size={16} />
                 Sign up

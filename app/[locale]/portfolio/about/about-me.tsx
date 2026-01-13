@@ -1,9 +1,9 @@
-import { getI18n } from "@/locales/server";
+import { getScopedI18n } from "@/locales/server";
 import { Card, CardContent } from "@/src/components/ui/card";
 import Link from "next/link";
 
 export async function AboutMe() {
-  const t = await getI18n();
+  const landingT = await getScopedI18n("landing.biography");
 
   return (
     <Card className="border dark:border-black rounded-3xl overflow-hidden w-full p-0 hover:bg-accent transition-colors duration-150">
@@ -11,16 +11,13 @@ export async function AboutMe() {
         <CardContent className="p-0">
           <div className="p-4 lg:p-3 xl:p-4">
             <h5 className="text-primary dark:text-foreground font-bold">
-              {t("biography")}
+              {landingT("title")}
             </h5>
             <h6 className="text-secondary dark:text-foreground/80 font-semibold truncate">
-              {t("developer")}
+              {landingT("developer")}
             </h6>
             <p className="text-xs font-light line-clamp-3 xl:line-clamp-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius
-              deleniti consequuntur sit incidunt quae ex temporibus expedita id
-              nostrum. Atque, earum! Repellendus possimus quibusdam cupiditate
-              labore, tempore earum sed!
+              {landingT("description")}
             </p>
           </div>
         </CardContent>

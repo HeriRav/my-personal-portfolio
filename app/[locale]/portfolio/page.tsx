@@ -5,15 +5,19 @@ import { LatestResume } from "./resume/latest-resume";
 import { AboutMe } from "./about/about-me";
 import AboutMainPage from "./about/about-main-page";
 import SectionItem from "./about/section/section-item";
-import sections from "./about/section/section";
+import { getSections } from "./about/section/section";
+import { getI18n } from "@/locales/server";
 
-export default function Page() {
+export default async function Page() {
+  const t = await getI18n();
+  const sections = await getSections();
+
   return (
     <div className="bg-[#f7f8f9] dark:bg-[#28292a]">
       <div className="w-full">
         <div className="space-y-2 pb-4">
           <h1 className="font-bold text-3xl">Heritiana Raveloson</h1>
-          <p className="font-extralight">Software developer</p>
+          <p className="font-extralight">{t("developer")}</p>
         </div>
         <div className="flex flex-col lg:flex-row items-stretch gap-4">
           <GalleryImage />
@@ -45,7 +49,7 @@ export default function Page() {
               />
             ))}
           </div>
-          <div className="hidden lg:flex h-175 xl:h-160 w-px bg-dark-accent dark:bg-foreground mx-4"></div>
+          <div className="hidden lg:flex h-175 xl:h-165 w-px bg-dark-accent dark:bg-foreground mx-4"></div>
           <AboutMainPage />
         </div>
       </div>
