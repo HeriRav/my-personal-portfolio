@@ -7,6 +7,7 @@ export default {
   developer: "Software developer",
   about_me: "About me",
   passion: "Passionate about Innovation and New Challenges",
+  top: "Back to top",
   landing: {
     experience: {
       latest: "My latest experience",
@@ -43,6 +44,13 @@ export default {
       motivation:
         "Always on the lookout for the latest innovations, I strive to continuously improve my skills. I optimize performance and experiment with new approaches to create quality solutions that meet user needs.",
       show_less: "... Show less",
+      date_place: "Date/Place of birth :",
+      month: "November 27, 1997",
+      university: "University :",
+      location: "Location :",
+      Email: "Email :",
+      phone: "Phone number :",
+      links: "Links :",
     },
     reference: {
       title: "Reference",
@@ -52,7 +60,8 @@ export default {
     search_result: {
       resume: {
         title: "Resume",
-        description: "",
+        description:
+          "My professional and academic journey. Since graduating, I have quickly entered the professional world, which allows me to develop my skills on a daily basis...",
       },
       skills: {
         title: "Skills",
@@ -69,6 +78,14 @@ export default {
     },
   },
   resume: {
+    title: "My Resume",
+    description: "My professional and academic background",
+    sub_description:
+      "Since graduating, I have quickly entered the professional world, allowing me to develop my skills on a daily basis.",
+    download: "Download Resume",
+    confirm: "Do you really want to download the {0} version of my resume ?",
+    cancel: "Cancel",
+    language: "en",
     academic: {
       card: {
         journey: "Academic Journey",
@@ -111,7 +128,8 @@ export default {
         view_all: "View Full Professional Resume",
       },
       title: "Professional",
-      description: "My Professional Experience",
+      description: "My Professional Experiences",
+      techno_used: "Technology(ies) used:",
       company: [
         {
           title: "Zeno Inno",
@@ -120,6 +138,8 @@ export default {
           date: "August 2024 - Ongoing",
           description:
             "Creating dynamic user interfaces with React. Integrating reusable components using Tailwind CSS. Working closely with product teams to improve user experience.",
+          techno:
+            "React, Gatsby, Tailwind CSS, TypeScript, Shadcn/ui, Express.js, Atlas MongoDB, EmailJS",
         },
         {
           title: "Zeno Inno",
@@ -127,7 +147,8 @@ export default {
           contract: "Internship",
           date: "May 2024 - July 2024",
           description:
-            "Implemented a batch processing system with Spring Batch targeting a PostgreSQL database, and developed a drag-and-drop UI feature using React.s",
+            "Implemented a batch processing system with Spring Batch targeting a PostgreSQL database, and developed a drag-and-drop UI feature using React.",
+          techno: "Spring Boot, Spring Batch, PostgreSQL, React",
         },
         {
           title: "Personal Project",
@@ -136,6 +157,7 @@ export default {
           date: "Dec 2023 - March 2024",
           description:
             "Designed and modeled a realistic 3D donut using Blender, focusing on shape, texture, and lighting. Created a decorative background to enhance visual appeal and scene composition, emphasizing color harmony and depth. This project demonstrated proficiency in 3D modeling, materials, and rendering techniques.",
+          techno: "Blender, Cycles Render Engine",
         },
         {
           title: "Software Overseas Academy (SOA)",
@@ -144,6 +166,8 @@ export default {
           date: "April 2023 - October 2023",
           description:
             "Responsible for the development and maintenance of the application. Designed and integrated end-to-end tests as part of a major application redesign to ensure system reliability and performance.",
+          techno:
+            "Symphony, JavaScript, PostgreSQL, Gitlab CI, Test End to End",
         },
         {
           title: "Inclusiv Academy",
@@ -152,6 +176,8 @@ export default {
           date: "October 2022 - April 2023",
           description:
             "- Web Project: Conceived and implemented a web application using React.js, Spring Boot, and PostgreSQL. This platform connects farmers directly with end customers, enhancing the agricultural supply chain.\n- Desktop Project: Designed and developed a desktop application using Visual Studio, WPF (.NET Framework, C#), and PostgreSQL. The app facilitates connections between freelancers and companies, streamlining the hiring process.",
+          techno:
+            "React.js, Spring Boot, PostgreSQL, C#, WPF, .NET Framework, Visual Studio",
         },
         {
           title: "Your Target Agency",
@@ -160,8 +186,15 @@ export default {
           date: "October 2021 - March 2022",
           description:
             '- Implemented a local development environment using XAMPP.\n- Developed and launched a real estate website using WordPress.\n- Redesigned the webmaster-madagascar.com website with WordPress Elementor.\n- Integrated product listings for the supermarket "Kibo" on PrestaShop.\n- Created and managed a blog page on the Best Place website.',
+          techno: "Wordpress, PHP, PrestaShop, Elementor",
         },
       ],
     },
+  },
+  not_found: {
+    title: "Oops ! Page not found",
+    description:
+      "The page you are looking for does not exist or has been moved.",
+    return_home: "Return to homepage",
   },
 } as const;

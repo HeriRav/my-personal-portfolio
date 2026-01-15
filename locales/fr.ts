@@ -7,6 +7,7 @@ export default {
   developer: "Développeur logiciel",
   about_me: "À propos de moi",
   passion: "Passionné par l’innovation et les nouveaux défis",
+  top: "Retour en haut",
   landing: {
     experience: {
       latest: "Ma récente expérience",
@@ -25,7 +26,7 @@ export default {
       latest: "Mon récent travail/projet",
       title: "Zeno - Paged'acceuil",
       description:
-        "Showcase site for Zeno. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, perferendis cupiditate, molestias, odio maxime quod at quos mollitia eaque asperiores quis id sequi aliquid ut! Expedita quos ratione accusamus in.",
+        "Site vitrine pour Zeno. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, perferendis cupiditate, molestias, odio maxime quod at quos mollitia eaque asperiores quis id sequi aliquid ut! Expedita quos ratione accusamus in.",
       view: "Voir tout",
     },
     biography: {
@@ -43,6 +44,13 @@ export default {
       motivation:
         "Toujours à l’affût des dernières innovations, je m’efforce d’améliorer continuellement mes compétences. J’optimise les performances et expérimente de nouvelles approches pour créer des solutions de qualité répondant aux besoins des utilisateurs.",
       show_less: "... Voir moins",
+      date_place: "Date/Lieu de naissance :",
+      month: "27 Novembre 1997",
+      university: "Université :",
+      location: "Localisation :",
+      Email: "Email :",
+      phone: "Numéro de téléphone :",
+      links: "Liens :",
     },
     reference: {
       title: "Réference",
@@ -51,8 +59,9 @@ export default {
     },
     search_result: {
       resume: {
-        title: "Curriculum Vitae",
-        description: "",
+        title: "Parcours",
+        description:
+          "Mon parcours professionnel et académique. Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien...",
       },
       skills: {
         title: "Compétences",
@@ -69,6 +78,14 @@ export default {
     },
   },
   resume: {
+    title: "Mon Parcours",
+    description: "Mon parcours professionnel et académique",
+    sub_description:
+      "Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien.",
+    download: "Télécharger le CV",
+    confirm: "Voulez-vous vraiment télécharger la version {0} de mon CV ?",
+    cancel: "Annuler",
+    language: "fr",
     academic: {
       card: {
         journey: "Parcours Académique",
@@ -112,7 +129,8 @@ export default {
         view_all: "Voir le parcours professionnel complet",
       },
       title: "Professionnel",
-      description: "Mon Expérience Professionnelle",
+      description: "Mes Expériences Professionnelles",
+      techno_used: "Technologie(s) utilisée(s) :",
       company: [
         {
           title: "Zeno Inno",
@@ -121,6 +139,8 @@ export default {
           date: "Août 2024 - En cours",
           description:
             "Création d’interfaces utilisateur dynamiques avec React. Intégration de composants réutilisables avec Tailwind CSS. Collaboration étroite avec les équipes produit pour améliorer l’expérience utilisateur.",
+          techno:
+            "React, Gatsby, Tailwind CSS, TypeScript, Shadcn/ui, Express.js, Atlas MongoDB, EmailJS",
         },
         {
           title: "Zeno Inno",
@@ -129,6 +149,7 @@ export default {
           date: "Mai 2024 - Juillet 2024",
           description:
             "Mise en place d’un système de traitement par lots avec Spring Batch ciblant une base de données PostgreSQL, et développement d’une fonctionnalité d’interface drag-and-drop avec React.",
+          techno: "Spring Boot, Spring Batch, PostgreSQL, React",
         },
         {
           title: "Projet personnel",
@@ -136,7 +157,8 @@ export default {
           contract: "Projet parallèle",
           date: "Décembre 2023 - Mars 2024",
           description:
-            "Conception et modélisation d’un donut 3D réaliste avec Blender, en se concentrant sur la forme, la texture et l’éclairage. Création d’un fond décoratif pour améliorer l’aspect visuel et la composition de la scène, en mettant l’accent sur l’harmonie des couleurs et la profondeur. Ce projet a démontré des compétences en modélisation 3D, matériaux et techniques de rendu.",
+            "Conception et modélisation d’un donut 3D réaliste avec Blender, en mettant l’accent sur la forme, la texture et l’éclairage. Création d’un décor pour renforcer l’attrait visuel et la composition de la scène. Ce projet a démontré une maîtrise de la modélisation 3D, des matériaux et des techniques de rendu.",
+          techno: "Blender, Moteur de rendu Cycles",
         },
         {
           title: "Software Overseas Academy (SOA)",
@@ -145,6 +167,8 @@ export default {
           date: "Avril 2023 - Octobre 2023",
           description:
             "Responsable du développement et de la maintenance de l’application. Conception et intégration de tests end-to-end dans le cadre d’une refonte majeure de l’application pour garantir la fiabilité et la performance du système.",
+          techno:
+            "Symphony, JavaScript, PostgreSQL, Gitlab CI, Test de Bout en Bout",
         },
         {
           title: "Inclusiv Academy",
@@ -153,6 +177,8 @@ export default {
           date: "Octobre 2022 - Avril 2023",
           description:
             "- Projet Web : Conception et réalisation d’une application web avec React.js, Spring Boot et PostgreSQL. Cette plateforme met en relation directe les agriculteurs avec les clients finaux, améliorant ainsi la chaîne d’approvisionnement agricole.\n- Projet Desktop : Conception et développement d’une application desktop avec Visual Studio, WPF (.NET Framework, C#) et PostgreSQL. L’application facilite la mise en relation entre freelances et entreprises, optimisant le processus de recrutement.",
+          techno:
+            "React.js, Spring Boot, PostgreSQL, C#, WPF, .NET Framework, Visual Studio",
         },
         {
           title: "Your Target Agency",
@@ -161,8 +187,14 @@ export default {
           date: "Octobre 2021 - Mars 2022",
           description:
             "- Mise en place d’un environnement de développement local avec XAMPP.\n- Développement et mise en ligne d’un site immobilier avec WordPress.\n- Refonte du site webmaster-madagascar.com avec WordPress Elementor.\n- Intégration des produits du supermarché « Kibo » sur PrestaShop.\n- Création et gestion d’une page blog sur le site Best Place.",
+          techno: "Wordpress, PHP, PrestaShop, Elementor",
         },
       ],
     },
+  },
+  not_found: {
+    title: "Oups ! Page non trouvée",
+    description: "La page que vous recherchez n'existe pas ou a été déplacée.",
+    return_home: "Retour à la page d'accueil",
   },
 } as const;
