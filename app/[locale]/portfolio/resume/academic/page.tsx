@@ -3,6 +3,14 @@ import Link from "next/link";
 import { GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/src/components/ui/card";
 import ParticleBackground from "@/src/components/ui/particle-background";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/src/components/ui/breadcrumb";
 
 export default async function Page() {
   const t = await getI18n();
@@ -31,15 +39,34 @@ export default async function Page() {
       <div className="z-10">
         <ParticleBackground />
       </div>
-      <div className="flex text-xs md:text-lg text-foreground font-semibold gap-x-1 pt-4 pb-12 z-20">
-        <Link href="/portfolio" className="hover:underline">
-          {t("home")}
-        </Link>
-        <Link href="/portfolio/resume" className="hover:underline">
-          &gt; {landingT("search_result.resume.title")}
-        </Link>
-        <p>&gt; {resumeT("title")}</p>
-      </div>
+
+      <Breadcrumb className="pt-4 pb-12 z-20">
+        <BreadcrumbList className="text-xs md:text-lg text-foreground font-semibold">
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/portfolio" className="hover:underline">
+                {t("home")}
+              </Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbSeparator />
+
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/portfolio/resume" className="hover:underline">
+                {landingT("search_result.resume.title")}
+              </Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbSeparator />
+
+          <BreadcrumbItem>
+            <BreadcrumbPage>{resumeT("title")}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
 
       <div className="text-center mb-16 z-20">
         <h1 className="text-4xl font-bold text-foreground italic underline underline-offset-4">
@@ -68,11 +95,11 @@ export default async function Page() {
                   </span>
                 </div>
 
-                <h3 className="text-base md:text-xl font-bold text-foreground mb-1">
+                <h3 className="text-base md:text-xl font-bold text-primary mb-1">
                   {item.title}
                 </h3>
 
-                <p className="text-sm md:text-base text-primary font-medium mb-2">
+                <p className="text-sm md:text-base text-foreground font-medium mb-2">
                   {item.institution}
                 </p>
 

@@ -1,6 +1,14 @@
 import { getI18n, getScopedI18n } from "@/locales/server";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/src/components/ui/breadcrumb";
 import ParticleBackground from "@/src/components/ui/particle-background";
-import { GraduationCap } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import Link from "next/link";
 
 export default async function Page() {
@@ -8,65 +16,50 @@ export default async function Page() {
   const landingT = await getScopedI18n("landing");
   const resumeT = await getScopedI18n("resume.professional");
 
-  const timeline = [
-    {
-      year: resumeT("company.0.date"),
-      title: resumeT("company.0.title"),
-      institution: resumeT("company.0.function"),
-      description: resumeT("company.0.description"),
-      side: "left",
-    },
-    {
-      year: resumeT("company.1.date"),
-      title: resumeT("company.1.title"),
-      institution: resumeT("company.1.function"),
-      description: resumeT("company.1.description"),
-      side: "right",
-    },
-    {
-      year: resumeT("company.2.date"),
-      title: resumeT("company.2.title"),
-      institution: resumeT("company.2.function"),
-      description: resumeT("company.2.description"),
-      side: "left",
-    },
-    {
-      year: resumeT("company.3.date"),
-      title: resumeT("company.3.title"),
-      institution: resumeT("company.3.function"),
-      description: resumeT("company.3.description"),
-      side: "right",
-    },
-    {
-      year: resumeT("company.4.date"),
-      title: resumeT("company.4.title"),
-      institution: resumeT("company.4.function"),
-      description: resumeT("company.4.description"),
-      side: "left",
-    },
-    {
-      year: resumeT("company.5.date"),
-      title: resumeT("company.5.title"),
-      institution: resumeT("company.5.function"),
-      description: resumeT("company.5.description"),
-      side: "right",
-    },
-  ];
+  const companyKeys = [0, 1, 2, 3, 4, 5] as const;
+  const timeline = companyKeys.map((index) => ({
+    year: resumeT(`company.${index}.date` as const),
+    title: resumeT(`company.${index}.title` as const),
+    institution: resumeT(`company.${index}.function` as const),
+    contract: resumeT(`company.${index}.contract` as const),
+    description: resumeT(`company.${index}.description` as const),
+    techno: resumeT(`company.${index}.techno` as const),
+    side: index % 2 === 0 ? "left" : "right",
+  }));
 
   return (
     <div className="flex flex-col">
       <div className="z-10">
         <ParticleBackground />
       </div>
-      <div className="flex text-xs md:text-lg text-foreground font-semibold gap-x-1 pt-4 pb-12 z-20">
-        <Link href="/portfolio" className="hover:underline">
-          {t("home")}
-        </Link>
-        <Link href="/portfolio/resume" className="hover:underline">
-          &gt; {landingT("search_result.resume.title")}
-        </Link>
-        <p>&gt; {resumeT("title")}</p>
-      </div>
+
+      <Breadcrumb className="pt-4 pb-12 z-20">
+        <BreadcrumbList className="text-xs md:text-lg text-foreground font-semibold">
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/portfolio" className="hover:underline">
+                {t("home")}
+              </Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbSeparator />
+
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/portfolio/resume" className="hover:underline">
+                {landingT("search_result.resume.title")}
+              </Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbSeparator />
+
+          <BreadcrumbItem>
+            <BreadcrumbPage>{resumeT("title")}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
 
       <div className="text-center mb-16 z-20">
         <h1 className="text-4xl font-bold text-foreground italic underline underline-offset-4">
@@ -90,39 +83,62 @@ export default async function Page() {
                 item.side === "left" ? "lg:justify-start" : "lg:justify-end"
               }`}
             >
-              {/* Bloc de contenu */}
               <div
-                className={`w-full lg:w-5/12 ${
-                  item.side === "left"
-                    ? "lg:pr-8 lg:text-left text-center"
-                    : "lg:pl-8 lg:text-left text-center"
+                className={`w-full lg:w-5/12 text-center lg:text-left ${
+                  item.side === "left" ? "lg:pr-8" : "lg:pl-8"
                 }`}
               >
                 <div className="bg-background rounded-lg shadow-lg p-6 hover:shadow-xl hover:dark:shadow-black transition-shadow duration-300 border border-slate-200">
-                  <div
-                    className={`flex items-center gap-2 mb-2 justify-center lg:justify-${
-                      item.side === "left" ? "start" : "start"
-                    }`}
-                  >
-                    <GraduationCap className="w-5 h-5 text-secondary" />
-                    <span className="text-sm font-semibold text-secondary">
-                      {item.year}
-                    </span>
+                  <div className="flex items-center gap-2 justify-center lg:justify-start mb-2">
+                    <Briefcase className="w-5 h-5 text-primary" />
+                    <h3 className="text-xl font-bold text-primary">
+                      {item.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-primary font-medium mb-3">
+                  <p className="text-foreground font-medium mb-3">
                     {item.institution}
                   </p>
+
+                  <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
+                    <span className="text-sm font-semibold text-secondary">
+                      {item.contract} •{" "}
+                      <span className="text-foreground/80">{item.year}</span>
+                    </span>
+                  </div>
+
                   <p className="text-foreground/60 text-sm">
-                    {item.description}
+                    {item.description
+                      .split("\n")
+                      .filter(Boolean)
+                      .map((sentence, index) => (
+                        <span key={index}>
+                          {sentence.trim()}
+                          <br />
+                        </span>
+                      ))}
                   </p>
+
+                  <div className="h-px w-full bg-linear-to-r from-transparent via-dark-accent to-transparent dark:bg-linear-to-r dark:from-transparent dark:via-foreground dark:to-transparent my-6"></div>
+
+                  <div>
+                    <span className="font-semibold text-foreground">
+                      {resumeT("techno_used")}
+                    </span>{" "}
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {item.techno.split(",").map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 bg-secondary/10 border border-secondary rounded-full text-sm text-foreground/80"
+                        >
+                          {tech.trim()}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Point sur la ligne */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-linear-to-br from-secondary to-primary border-4 border-white shadow-lg z-10"></div>
+              <div className="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-linear-to-br from-secondary to-primary border-4 border-white shadow-lg z-10" />
             </div>
           ))}
         </div>
