@@ -24,7 +24,7 @@ export async function getSections() {
       heading: landingT("resume.title"),
       icon: FileUser,
       href: "/portfolio/resume",
-      description: lorem,
+      description: landingT("resume.description"),
     },
     {
       id: "skills",
