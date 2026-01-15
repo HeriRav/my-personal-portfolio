@@ -12,6 +12,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,6 +22,19 @@ export function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -98,11 +112,18 @@ export function Header() {
                       flex flex-col gap-2 items-end
                       animate-in fade-in zoom-in"
             >
+              {isVisible && (
+                <button
+                  className="flex flex-col lg:hidden w-full px-4 py-2 rounded-full bg-primary text-light-grey shadow-lg cursor-pointer hover:scale-105 transition"
+                  onClick={scrollToTop}
+                >
+                  &#129033;
+                </button>
+              )}
               {/* Langue */}
               <div className="w-full hover:scale-105 transition-all">
                 <LocaleSelect />
               </div>
-
               {/* Mode clair/sombre */}
               <button
                 onClick={toggleTheme}
@@ -110,7 +131,6 @@ export function Header() {
               >
                 {theme === "light" ? "☀️ Light" : "🌙 Dark"}
               </button>
-
               {/* Auth Buttons */}
               <Link
                 href="/login"
@@ -121,7 +141,6 @@ export function Header() {
                 <LogIn size={16} />
                 Sign in
               </Link>
-
               <Link
                 href="/register"
                 onClick={() => setOpen(false)}
@@ -137,7 +156,7 @@ export function Header() {
           {/* FAB Button */}
           <Button
             onClick={() => setOpen(!open)}
-            className="h-15 w-15 rounded-full bg-primary text-primary-foreground
+            className="w-12 h-12 md:h-15 md:w-15 rounded-full bg-primary text-primary-foreground
                  flex items-center justify-center shadow-lg transition
                  hover:scale-105 cursor-pointer"
           >
