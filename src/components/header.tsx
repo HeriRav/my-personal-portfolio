@@ -75,10 +75,10 @@ export function Header() {
             {/* Mode Clair/Sombre */}
             <Button
               onClick={toggleTheme}
-              className="p-2 rounded-full border border-foreground hover:bg-transparent hover:border-[#FFD700] hover:dark:border-[#184392] hover:dark:bg-[#184392] transition cursor-pointer"
+              className="p-2 rounded-full border border-foreground hover:border-[#184392] hover:bg-[#184392] hover:dark:border-[#FFD700] hover:dark:bg-transparent transition cursor-pointer"
               variant={"ghost"}
             >
-              {theme === "light" ? "☀️" : "🌙"}
+              {theme === "light" ? "🌙" : "☀️"}
             </Button>
 
             {/* Boutons se connecter et s'inscrire */}
@@ -129,7 +129,7 @@ export function Header() {
                 onClick={toggleTheme}
                 className="flex flex-col items-center gap-2 px-4 py-2 rounded-full bg-background border border-[#184392] text-[#184392] dark:border-[#FFD700] dark:text-[#FFD700] text-sm cursor-pointer w-full hover:scale-105 transition"
               >
-                {theme === "light" ? "☀️ Light" : "🌙 Dark"}
+                {theme === "light" ? "🌙 Dark" : "☀️ Light"}
               </button>
               {/* Auth Buttons */}
               <Link
