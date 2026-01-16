@@ -192,6 +192,34 @@ export default {
       ],
     },
   },
+  skills: {
+    title: "Mes Compétences Techniques",
+    description: "Un aperçu de mes compétences techniques et de mon expertise",
+    frontend: {
+      title: "Front-end",
+      tech: "React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
+    },
+    backend: {
+      title: "Back-end",
+      tech: "Node.js, Express.js, Java, Spring Boot",
+    },
+    database: {
+      title: "Base de Données",
+      tech: "MongoDB, PostgreSQL, MySQL",
+    },
+    version: {
+      title: "Gestion de Version",
+      tech: "Git, GitHub, GitLab, Bitbucket",
+    },
+    cicd: {
+      title: "CI/CD",
+      tech: "GitHub Actions, GitLab CI",
+    },
+    tools: {
+      title: "Outils",
+      tech: "VS Code, IntelliJ IDEA, Postman, Docker",
+    },
+  },
   not_found: {
     title: "Oups ! Page non trouvée",
     description: "La page que vous recherchez n'existe pas ou a été déplacée.",

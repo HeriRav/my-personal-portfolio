@@ -191,6 +191,34 @@ export default {
       ],
     },
   },
+  skills: {
+    title: "My Technical Skills",
+    description: "A showcase of my technical skills and expertise",
+    frontend: {
+      title: "Front-end",
+      tech: "React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
+    },
+    backend: {
+      title: "Back-end",
+      tech: "Node.js, Express.js, Java, Spring Boot",
+    },
+    database: {
+      title: "Database Management",
+      tech: "MongoDB, PostgreSQL, MySQL",
+    },
+    version: {
+      title: "Version Control",
+      tech: "Git, GitHub, GitLab",
+    },
+    cicd: {
+      title: "CI/CD",
+      tech: "GitHub Actions, GitLab CI",
+    },
+    tools: {
+      title: "Tools",
+      tech: "VS Code, IntelliJ IDEA, Postman, Docker",
+    },
+  },
   not_found: {
     title: "Oops ! Page not found",
     description:
