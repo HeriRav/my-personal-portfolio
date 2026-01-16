@@ -71,10 +71,10 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-foreground border-6 border-foreground p-4 w-fit mx-auto mb-4">
           {resumeT("title")}
         </h1>
-        <h2 className="text-2xl text-foreground/70 mb-2">
+        <h2 className="text-2xl text-foreground/70 text-center mb-2">
           {resumeT("description")}
         </h2>
-        <h3 className="text-xl text-foreground/50 mb-8">
+        <h3 className="text-xl text-foreground/50 text-center mb-8">
           {resumeT("sub_description")}
         </h3>
 
