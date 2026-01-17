@@ -47,6 +47,7 @@ export default {
       date_place: "Date/Place of birth :",
       month: "November 27, 1997",
       university: "University :",
+      university_name: "Regional University Space of the Indian Ocean (EUROI)",
       location: "Location :",
       Email: "Email :",
       phone: "Phone number :",
@@ -65,7 +66,8 @@ export default {
       },
       skills: {
         title: "Skills",
-        description: "",
+        description:
+          "My skills. A showcase of my technical skills and expertise...",
       },
       works: {
         title: "Works",
@@ -189,6 +191,34 @@ export default {
           techno: "Wordpress, PHP, PrestaShop, Elementor",
         },
       ],
+    },
+  },
+  skills: {
+    title: "My Technical Skills",
+    description: "A showcase of my technical skills and expertise",
+    frontend: {
+      title: "Front-end",
+      tech: "React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
+    },
+    backend: {
+      title: "Back-end",
+      tech: "Node.js, Express.js, Java, Spring Boot",
+    },
+    database: {
+      title: "Database Management",
+      tech: "MongoDB, PostgreSQL, MySQL",
+    },
+    version: {
+      title: "Version Control",
+      tech: "Git, GitHub, GitLab",
+    },
+    cicd: {
+      title: "CI/CD",
+      tech: "GitHub Actions, GitLab CI",
+    },
+    tools: {
+      title: "Tools",
+      tech: "VS Code, IntelliJ IDEA, Postman, Docker",
     },
   },
   not_found: {

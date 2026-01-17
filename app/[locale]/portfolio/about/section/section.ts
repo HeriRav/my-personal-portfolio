@@ -33,7 +33,7 @@ export async function getSections() {
       heading: landingT("skills.title"),
       icon: Cpu,
       href: "/portfolio/skills",
-      description: lorem,
+      description: landingT("skills.description"),
     },
     {
       id: "works",

@@ -71,10 +71,10 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-foreground border-6 border-foreground p-4 w-fit mx-auto mb-4">
           {resumeT("title")}
         </h1>
-        <h2 className="text-2xl text-foreground/70 mb-2">
+        <h2 className="text-2xl text-foreground/70 text-center mb-2">
           {resumeT("description")}
         </h2>
-        <h3 className="text-xl text-foreground/50 mb-8">
+        <h3 className="text-xl text-foreground/50 text-center mb-8">
           {resumeT("sub_description")}
         </h3>
 
@@ -114,7 +114,7 @@ export default function Page() {
           </AlertDialog>
         </div>
       </div>
-      <div className="lg:flex items-center justify-center 3xl:justify-start space-y-8 lg:space-y-0 md:gap-x-8 z-20">
+      <div className="lg:flex items-center justify-center 3xl:justify-start space-y-8 lg:space-y-0 md:gap-x-8 z-20 py-8">
         <ProfessionalResumeCard />
 
         <AcademicResumeCard />
