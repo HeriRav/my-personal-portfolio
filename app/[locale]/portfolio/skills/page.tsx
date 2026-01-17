@@ -78,7 +78,7 @@ export default function Page() {
         </BreadcrumbList>
       </Breadcrumb>
 
-      <div className="flex flex-col gap-6 mx-auto">
+      <div className="flex flex-col gap-6 mx-auto py-8">
         <h1 className="text-4xl font-bold text-foreground text-center border-6 border-foreground p-4 w-fit mx-auto mb-4">
           {skillT("title")}
         </h1>

@@ -13,7 +13,7 @@ const SkillCard = ({ icon, title, tech }: SkillCardProps) => {
       <div className="flex flex-col gap-y-4">
         {icon}
 
-        <h1 className="text-lg font-semibold text-primary">{title}</h1>
+        <h1 className="text-2xl font-semibold text-primary">{title}</h1>
 
         <p className="flex flex-wrap gap-2">
           {tech.split(",").map((t, i) => (

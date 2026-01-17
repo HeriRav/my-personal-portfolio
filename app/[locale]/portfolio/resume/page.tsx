@@ -114,7 +114,7 @@ export default function Page() {
           </AlertDialog>
         </div>
       </div>
-      <div className="lg:flex items-center justify-center 3xl:justify-start space-y-8 lg:space-y-0 md:gap-x-8 z-20">
+      <div className="lg:flex items-center justify-center 3xl:justify-start space-y-8 lg:space-y-0 md:gap-x-8 z-20 py-8">
         <ProfessionalResumeCard />
 
         <AcademicResumeCard />
