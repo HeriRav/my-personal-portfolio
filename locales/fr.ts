@@ -47,6 +47,8 @@ export default {
       date_place: "Date/Lieu de naissance :",
       month: "27 Novembre 1997",
       university: "Université :",
+      university_name:
+        "Espace Universitaire Régional de l'Océan Indien (EUROI)",
       location: "Localisation :",
       Email: "Email :",
       phone: "Numéro de téléphone :",
@@ -65,7 +67,8 @@ export default {
       },
       skills: {
         title: "Compétences",
-        description: "",
+        description:
+          "Mes compétences. Un aperçu de mes compétences techniques et de mon expertise...",
       },
       works: {
         title: "Réalisations",
@@ -209,7 +212,7 @@ export default {
     },
     version: {
       title: "Gestion de Version",
-      tech: "Git, GitHub, GitLab, Bitbucket",
+      tech: "Git, GitHub, GitLab",
     },
     cicd: {
       title: "CI/CD",

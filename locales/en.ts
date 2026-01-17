@@ -47,6 +47,7 @@ export default {
       date_place: "Date/Place of birth :",
       month: "November 27, 1997",
       university: "University :",
+      university_name: "Regional University Space of the Indian Ocean (EUROI)",
       location: "Location :",
       Email: "Email :",
       phone: "Phone number :",
@@ -65,7 +66,8 @@ export default {
       },
       skills: {
         title: "Skills",
-        description: "",
+        description:
+          "My skills. A showcase of my technical skills and expertise...",
       },
       works: {
         title: "Works",
