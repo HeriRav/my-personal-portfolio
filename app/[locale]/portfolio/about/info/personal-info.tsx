@@ -22,7 +22,7 @@ export default function PersonalInfo() {
     },
     {
       label: landingT("university"),
-      value: "Regional University Space of the Indian Ocean (EUROI)",
+      value: landingT("university_name"),
     },
     {
       label: landingT("location"),
