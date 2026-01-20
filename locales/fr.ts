@@ -8,6 +8,8 @@ export default {
   about_me: "À propos de moi",
   passion: "Passionné par l’innovation et les nouveaux défis",
   top: "Retour en haut",
+  light: "Mode clair",
+  dark: "Mode sombre",
   landing: {
     experience: {
       latest: "Ma récente expérience",
@@ -72,7 +74,7 @@ export default {
       },
       works: {
         title: "Réalisations",
-        description: "",
+        description: "Une vitrine de mes réalisations et projets...",
       },
       contact: {
         title: "Contact",
@@ -222,6 +224,11 @@ export default {
       title: "Outils",
       tech: "VS Code, IntelliJ IDEA, Postman, Docker",
     },
+  },
+  works: {
+    title: "Mes Réalisations & Projets",
+    description: "Une vitrine de mes réalisations et projets",
+    language: "fr",
   },
   not_found: {
     title: "Oups ! Page non trouvée",

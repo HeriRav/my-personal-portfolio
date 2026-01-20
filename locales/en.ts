@@ -8,6 +8,8 @@ export default {
   about_me: "About me",
   passion: "Passionate about Innovation and New Challenges",
   top: "Back to top",
+  light: "Light mode",
+  dark: "Dark mode",
   landing: {
     experience: {
       latest: "My latest experience",
@@ -71,7 +73,7 @@ export default {
       },
       works: {
         title: "Works",
-        description: "",
+        description: "A showcase of my works and projects...",
       },
       contact: {
         title: "Contact",
@@ -220,6 +222,11 @@ export default {
       title: "Tools",
       tech: "VS Code, IntelliJ IDEA, Postman, Docker",
     },
+  },
+  works: {
+    title: "My Works & Projects",
+    description: "A showcase of my works and projects",
+    language: "en",
   },
   not_found: {
     title: "Oops ! Page not found",
