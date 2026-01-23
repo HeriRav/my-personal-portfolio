@@ -1,4 +1,4 @@
-// app/not-found.tsx
+// app/[local]/not-found.tsx
 import { Button } from "@/src/components/ui/button";
 import Link from "next/link";
 

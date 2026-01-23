@@ -16,6 +16,7 @@ export default function DeviceMockup({
               src={desktopSrc}
               alt={alt ?? "Project preview"}
               className="w-full h-full object-contain"
+              loading="eager"
             />
             <div className="absolute flex lg:hidden right-4 top-1/2 -translate-y-1/2 w-5 h-5 bg-dark-accent border-2 border-gray-500 rounded-full" />
           </div>
@@ -34,11 +35,12 @@ export default function DeviceMockup({
         <div className="h-8 w-0.75 bg-dark-accent absolute -end-4.25 top-35.5 rounded-e-lg" />
         <div className="h-11.5 w-0.75 bg-dark-accent absolute -start-4.25 top-31 rounded-s-lg" />
         <div className="h-11.5 w-0.75 bg-dark-accent absolute -start-4.25 top-44.5 rounded-s-lg" />
-        <div className="rounded-4xl overflow-hidden w-full h-full bg-ring">
+        <div className="rounded-4xl overflow-hidden w-full h-full bg-black">
           <Image
             src={mobileSrc}
             alt={alt ?? "Project preview"}
             className="w-full h-full object-contain"
+            loading="eager"
           />
           <div className="absolute left-1/2 top-2 -translate-x-1/2 w-24 h-4 bg-dark-accent rounded-full" />
           <div className="absolute left-1/2 bottom-1 -translate-x-1/2 w-28 h-1 bg-gray-100 rounded" />

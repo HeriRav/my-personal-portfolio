@@ -42,7 +42,7 @@ export async function getSections() {
       heading: landingT("works.title"),
       icon: Monitor,
       href: "/portfolio/works",
-      description: lorem,
+      description: landingT("works.description"),
     },
     {
       id: "contact",

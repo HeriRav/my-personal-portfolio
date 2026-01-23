@@ -15,6 +15,7 @@ export default function GalleryImage() {
               alt="ph-1"
               className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
               fetchPriority="low"
+              loading="eager"
             />
           </div>
           <div className="hidden sm:grid grid-rows-2">

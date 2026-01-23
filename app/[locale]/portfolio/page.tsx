@@ -8,9 +8,19 @@ import SectionItem from "./about/section/section-item";
 import { getSections } from "./about/section/section";
 import { getI18n } from "@/locales/server";
 
+const fetch = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data fetched");
+    }, 1000);
+  });
+};
+
 export default async function Page() {
   const t = await getI18n();
   const sections = await getSections();
+
+  await fetch();
 
   return (
     <div className="bg-[#f7f8f9] dark:bg-[#28292a]">
