@@ -10,6 +10,7 @@ export default {
   top: "Retour en haut",
   light: "Mode clair",
   dark: "Mode sombre",
+  loading: "Chargement...",
   landing: {
     experience: {
       latest: "Ma récente expérience",
@@ -74,7 +75,8 @@ export default {
       },
       works: {
         title: "Réalisations",
-        description: "Une vitrine de mes réalisations et projets...",
+        description:
+          "Mes réalisations et projets. Une vitrine de mes réalisations et projets...",
       },
       contact: {
         title: "Contact",
@@ -229,6 +231,62 @@ export default {
     title: "Mes Réalisations & Projets",
     description: "Une vitrine de mes réalisations et projets",
     language: "fr",
+    projects: {
+      yta: {
+        title: "Eto.mg",
+        type: "Stage",
+        description:
+          "Site immobilier complet conçu pour faciliter les transactions.",
+        techno: "Wordpress, PHP",
+      },
+      acm: {
+        title: "TCA (Titre de Circulation Aéroportuaire)",
+        type: "Soutenance de Licence",
+        description:
+          "Application web pour la demande d’un Titre de Circulation Aéroportuaire permanent.",
+        techno: "C#, .NET, Visual Studio, SQL Server",
+      },
+      ia_1: {
+        title: "Samysamy",
+        type: "Projet d'examen",
+        description:
+          "Application de bureau : plateforme reliant freelances et entreprises.",
+        techno: "C#, WPF, Visual Studio, PostgreSQL",
+        link_1_desc: "Répertoire",
+      },
+      ia_2: {
+        title: "Mihary'ket",
+        type: "Soutenance de Master",
+        description: "Plateforme de vente en ligne de produits agricultures.",
+        techno: "React, Vite, Bootstrap, Spring Boot, PostgreSQL, Stripe",
+        link_1_desc: "Répertoire Frontend",
+        link_2_desc: "Répertoire Backend",
+      },
+      blender: {
+        title: "Blander - Donut",
+        type: "Projet personnel",
+        description:
+          "Projet de modélisation 3D d’un donut avec Blender et le moteur de rendu Cycles.",
+        techno: "Blender, Cycles",
+        link_1_desc: "Télécharger le fichier .blend (nécessite Blender)",
+      },
+      zeno: {
+        title: "Zeno - Site Vitrine",
+        type: "Mission en CDI",
+        description: "Site vitrine pour Zeno.",
+        techno:
+          "Gatsby, Typescript, Tailwind CSS, Express.js, MongoDB, Atlas, EmailJs",
+        link_1_desc: "Site officiel de Zeno",
+      },
+      portfolio: {
+        title: "Heritiana Raveloson - Portfolio",
+        type: "Projet Personnel",
+        description: "Version simplifiée du site de portfolio",
+        techno: "React, Vite, Tailwind, EmailJs",
+        link_1_desc: "Répertoire",
+        link_2_desc: "Site du Portfolio",
+      },
+    },
   },
   not_found: {
     title: "Oups ! Page non trouvée",
