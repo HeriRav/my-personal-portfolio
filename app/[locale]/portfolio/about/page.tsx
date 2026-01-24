@@ -1,10 +1,23 @@
 "use client";
 
 import { useI18n } from "@/locales/client";
+import Lenis from "lenis";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Page() {
   const t = useI18n();
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <div className="flex flex-col">

@@ -16,6 +16,7 @@ export async function LatestProject() {
             alt={""}
             className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
             fetchPriority="low"
+            loading="eager"
           />
         </div>
         <div className="flex flex-col p-4 pb-4">

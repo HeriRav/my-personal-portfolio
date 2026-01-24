@@ -8,6 +8,9 @@ export default {
   about_me: "About me",
   passion: "Passionate about Innovation and New Challenges",
   top: "Back to top",
+  light: "Light mode",
+  dark: "Dark mode",
+  loading: "Loading...",
   landing: {
     experience: {
       latest: "My latest experience",
@@ -71,7 +74,8 @@ export default {
       },
       works: {
         title: "Works",
-        description: "",
+        description:
+          "My works and projetcs. A showcase of my works and projects...",
       },
       contact: {
         title: "Contact",
@@ -219,6 +223,67 @@ export default {
     tools: {
       title: "Tools",
       tech: "VS Code, IntelliJ IDEA, Postman, Docker",
+    },
+  },
+  works: {
+    title: "My Works & Projects",
+    description: "A showcase of my works and projects",
+    language: "en",
+    projects: {
+      yta: {
+        title: "Eto.mg",
+        type: "Internship",
+        description:
+          "Comprehensive real estate website designed to facilitate transactions.",
+        techno: "Wordpress, PHP",
+      },
+      acm: {
+        title: "TCA(Airport Circular Title)",
+        type: "Thesis Defense for Bachelor's Degree",
+        description:
+          "Web application for requesting a permanent Airport Circular Title.",
+        techno: "C#, .NET, Visual Studio, SQL Server",
+      },
+      ia_1: {
+        title: "Samysamy",
+        type: "Exam Project",
+        description:
+          "Desktop application : Platform connecting freelancers and companies.",
+        techno: "C#, WPF, Visual Studio, PostgreSQL",
+        link_1_desc: "Repository",
+      },
+      ia_2: {
+        title: "Mihary'ket",
+        type: "Thesis Defense for Master's Degree",
+        description: "Online sales platform for agricultural products.",
+        techno: "React, Vite, Bootstrap, Spring Boot, PostgreSQL, Stripe",
+        link_1_desc: "Frontend Repository",
+        link_2_desc: "Backend Repository",
+      },
+      blender: {
+        title: "Blander - Donut",
+        type: "Personal Project",
+        description:
+          "3D donut modeling project using Blender with Cycles render engine.",
+        techno: "Blender, Cycles",
+        link_1_desc: "Download .blend File (requires Blender)",
+      },
+      zeno: {
+        title: "Zeno - Landing Page",
+        type: "Permanent Contract Mission",
+        description: "Showcase site for Zeno.",
+        techno:
+          "Gatsby, Typescript, Tailwind CSS, Express.js, MongoDB, Atlas, EmailJs",
+        link_1_desc: "Zeno Official Website",
+      },
+      portfolio: {
+        title: "Heritiana Raveloson - Portfolio",
+        type: "Personal Project",
+        description: "Simplified version of the portfolio website",
+        techno: "React, Vite, Tailwind, EmailJs",
+        link_1_desc: "Repository",
+        link_2_desc: "Portfolio Website",
+      },
     },
   },
   not_found: {

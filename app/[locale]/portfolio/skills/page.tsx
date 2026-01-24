@@ -72,7 +72,7 @@ export default function Page() {
 
           <BreadcrumbItem>
             <BreadcrumbPage>
-              {landingT("search_result.resume.title")}
+              {landingT("search_result.skills.title")}
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
