@@ -5,7 +5,7 @@ type SectionItemProps = {
   subtitle: string;
   heading: string;
   href: string;
-  icon: React.ElementType;
+  icon: React.ComponentType<{ className?: string }>;
   description: string;
 };
 
