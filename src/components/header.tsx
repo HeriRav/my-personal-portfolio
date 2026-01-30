@@ -7,12 +7,15 @@ import { LogIn, Search, User, UserPlus, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTheme } from "../hooks/useTheme";
 import { LocaleSelect } from "@/app/[locale]/LocaleSelect";
+import { useI18n } from "@/locales/client";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(false);
+
+  const t = useI18n();
 
   useEffect(() => {
     const onScroll = () => {
@@ -85,7 +88,7 @@ export function Header() {
             <Button variant="ghost" asChild className="dark:hover:bg-white/20">
               <Link href="/login">
                 <LogIn size={16} />
-                Sign in
+                {t("login.title")}
               </Link>
             </Button>
 
@@ -95,7 +98,7 @@ export function Header() {
             >
               <Link href="/register">
                 <UserPlus size={16} />
-                Sign up
+                {t("register.title")}
               </Link>
             </Button>
           </div>
@@ -139,7 +142,7 @@ export function Header() {
                      bg-background border border-foreground shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
               >
                 <LogIn size={16} />
-                Sign in
+                {t("login.title")}
               </Link>
               <Link
                 href="/register"
@@ -148,7 +151,7 @@ export function Header() {
                      bg-primary border border-primary dark:bg-foreground text-primary-foreground shadow-md text-sm whitespace-nowrap w-full hover:scale-105 transition"
               >
                 <UserPlus size={16} />
-                Sign up
+                {t("register.title")}
               </Link>
             </div>
           )}

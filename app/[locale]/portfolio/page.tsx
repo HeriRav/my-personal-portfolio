@@ -12,7 +12,7 @@ const fetch = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve("Data fetched");
-    }, 1000);
+    }, 500);
   });
 };
 
