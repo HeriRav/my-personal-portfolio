@@ -287,6 +287,23 @@ export default {
       },
     },
   },
+  contact: {
+    title: "Contactez moi",
+    description:
+      "Un projet à développer ou un poste à pourvoir ? Discutons-en !",
+    location: "Localisation :",
+    Email: "Email :",
+    phone: "Numéro de téléphone :",
+    form: {
+      name: "Nom",
+      name_placeholder: "Votre nom...",
+      email: "Email",
+      email_placeholder: "Votre email...",
+      message: "Message",
+      message_placeholder: "Votre message...",
+      send: "Envoyer",
+    },
+  },
   login: {
     title: "Se connecter",
     login: "Log in",
@@ -309,7 +326,7 @@ export default {
     signin: "Déjà inscrit ?",
   },
   not_found: {
-    title: "Oups ! Page non trouvée",
+    title: "Oups ! Page introuvable",
     description: "La page que vous recherchez n'existe pas ou a été déplacée.",
     return_home: "Retour à la page d'accueil",
   },
