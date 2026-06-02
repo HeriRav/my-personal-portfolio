@@ -1,10 +1,12 @@
 import { Header } from "@/src/components/header";
 import Top from "@/src/components/ui/top";
 import { PropsWithChildren } from "react";
+import ScrollToTop from "./scoll-to-top";
 
 export default function Layout(props: PropsWithChildren) {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <div className="h-px w-full bg-foreground/50 my-6 mt-28 md:mt-20"></div>
       <div className="flex flex-col bg-[#f7f8f9] dark:bg-[#28292a] gap-4 px-4 md:px-32 3xl:px-64 mx-auto 3xl:mx-0 max-w-337.5 3xl:max-w-400">

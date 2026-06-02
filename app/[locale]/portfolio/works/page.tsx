@@ -26,6 +26,8 @@ import portfolio_en_mobile from "./assets/portfolio(en)-mobile.jpg";
 import WorkSection from "./components/work-section";
 import { StaticImageData } from "next/image";
 import WorkLink from "./components/work-link";
+import { motion, useScroll } from "motion/react";
+import PageNavigation from "@/src/components/ui/page-navigation";
 
 type WorkLink = {
   href: string;
@@ -47,11 +49,15 @@ export default function Page() {
   const t = useI18n();
   const landingT = useScopedI18n("landing");
   const workT = useScopedI18n("works");
+  const skillsT = useScopedI18n("skills");
+  const contactT = useScopedI18n("contact");
 
   const isEn = workT("language") === "en";
 
   const pcUrl = isEn ? portfolio_en : portfolio_fr;
   const mobileUrl = isEn ? portfolio_en_mobile : portfolio_fr_mobile;
+
+  const { scrollYProgress } = useScroll();
 
   const works: Work[] = [
     {
@@ -152,76 +158,103 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex flex-col">
-      <Breadcrumb className="pt-4 pb-12 z-20">
-        <BreadcrumbList className="text-xs md:text-lg text-foreground font-semibold">
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="/portfolio" className="hover:underline">
-                {t("home")}
-              </Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+    <>
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 7,
+          originX: 0,
+          backgroundColor: "#8a2be2",
+          zIndex: 99,
+        }}
+      />
+      <div className="flex flex-col">
+        <Breadcrumb className="pt-4 pb-12 z-20">
+          <BreadcrumbList className="text-xs md:text-lg text-foreground font-semibold">
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/portfolio" className="hover:underline">
+                  {t("home")}
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbSeparator />
+            <BreadcrumbSeparator />
 
-          <BreadcrumbItem>
-            <BreadcrumbPage>
-              {landingT("search_result.works.title")}
-            </BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      <div className="flex flex-col gap-6 mx-auto py-8">
-        <h1 className="text-4xl font-bold text-foreground text-center border-6 border-foreground p-4 w-fit mx-auto mb-4">
-          {workT("title")}
-        </h1>
+            <BreadcrumbItem>
+              <BreadcrumbPage>
+                {landingT("search_result.works.title")}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <div className="flex flex-col gap-6 mx-auto py-8">
+          <h1 className="text-4xl font-bold text-foreground text-center border-6 border-foreground p-4 w-fit mx-auto mb-4">
+            {workT("title")}
+          </h1>
 
-        <h2 className="text-2xl text-foreground/70 text-center mb-2">
-          {workT("description")}
-        </h2>
+          <h2 className="text-2xl text-foreground/70 text-center mb-2">
+            {workT("description")}
+          </h2>
 
-        {works.map((work, index) => (
-          <WorkSection
-            key={work.name}
-            desktopSrc={work.desktopSrc}
-            mobileSrc={work.mobileSrc}
-            reverse={index % 2 !== 0}
-          >
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-semibold">{work.name}</h3>
-              <span className="text-sm text-secondary uppercase tracking-wide opacity-70">
-                {work.type}
-              </span>
-              <p className="text-base text-ring leading-relaxed">
-                {work.description}
-              </p>
-              <p className="text-sm flex flex-wrap gap-2">
-                {work.techno.split(",").map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-primary/10 border border-primary rounded-full text-sm text-foreground/80"
-                  >
-                    {tech.trim()}
-                  </span>
-                ))}
-              </p>
-              {work.links && work.links.length > 0 && (
-                <div className="flex flex-col w-fit gap-2 pt-2">
-                  {work.links.map((link) => (
-                    <WorkLink
-                      key={link.href}
-                      href={link.href}
-                      label={link.label}
-                      download={link.download}
-                    />
+          {works.map((work, index) => (
+            <WorkSection
+              key={work.name}
+              desktopSrc={work.desktopSrc}
+              mobileSrc={work.mobileSrc}
+              reverse={index % 2 !== 0}
+            >
+              <div className="flex flex-col gap-4">
+                <h3 className="text-2xl font-semibold">{work.name}</h3>
+                <span className="text-sm text-secondary uppercase tracking-wide opacity-70">
+                  {work.type}
+                </span>
+                <p className="text-base text-ring leading-relaxed">
+                  {work.description}
+                </p>
+                <p className="text-sm flex flex-wrap gap-2">
+                  {work.techno.split(",").map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-primary/10 border border-primary rounded-full text-sm text-foreground/80"
+                    >
+                      {tech.trim()}
+                    </span>
                   ))}
-                </div>
-              )}
-            </div>
-          </WorkSection>
-        ))}
+                </p>
+                {work.links && work.links.length > 0 && (
+                  <div className="flex flex-col w-fit gap-2 pt-2">
+                    {work.links.map((link) => (
+                      <WorkLink
+                        key={link.href}
+                        href={link.href}
+                        label={link.label}
+                        download={link.download}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </WorkSection>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/skills",
+          label: skillsT("title"),
+        }}
+        right={{
+          href: "/portfolio/contact",
+          label: contactT("title"),
+        }}
+      />
+    </>
   );
 }

@@ -11,11 +11,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb";
+import PageNavigation from "@/src/components/ui/page-navigation";
 
 export default async function Page() {
   const t = await getI18n();
   const landingT = await getScopedI18n("landing");
   const resumeT = await getScopedI18n("resume.academic");
+  const professionalT = await getScopedI18n("resume.professional");
 
   const timeline = [
     {
@@ -162,6 +164,13 @@ export default async function Page() {
 
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-lg"></div>
       </div> */}
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/resume/professional",
+          label: professionalT("title"),
+        }}
+      />
     </div>
   );
 }

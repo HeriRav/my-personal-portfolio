@@ -7,6 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb";
+import PageNavigation from "@/src/components/ui/page-navigation";
 import ParticleBackground from "@/src/components/ui/particle-background";
 import { Briefcase } from "lucide-react";
 import Link from "next/link";
@@ -15,6 +16,7 @@ export default async function Page() {
   const t = await getI18n();
   const landingT = await getScopedI18n("landing");
   const resumeT = await getScopedI18n("resume.professional");
+  const academicT = await getScopedI18n("resume.academic");
 
   const companyKeys = [0, 1, 2, 3, 4, 5] as const;
   const timeline = companyKeys.map((index) => ({
@@ -146,6 +148,13 @@ export default async function Page() {
         {/* Cercle de fin */}
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-lg"></div>
       </div>
+
+      <PageNavigation
+        right={{
+          href: "/portfolio/resume/academic",
+          label: academicT("title"),
+        }}
+      />
     </div>
   );
 }

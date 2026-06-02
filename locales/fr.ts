@@ -28,8 +28,7 @@ export default {
     works: {
       latest: "Mon récent travail/projet",
       title: "Zeno - Paged'acceuil",
-      description:
-        "Site vitrine pour Zeno. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, perferendis cupiditate, molestias, odio maxime quod at quos mollitia eaque asperiores quis id sequi aliquid ut! Expedita quos ratione accusamus in.",
+      description: "Site vitrine pour Zeno.",
       view: "Voir tout",
     },
     biography: {
@@ -89,7 +88,7 @@ export default {
     description: "Mon parcours professionnel et académique",
     sub_description:
       "Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien.",
-    download: "Télécharger le CV",
+    download: "Télécharger mon CV",
     confirm: "Voulez-vous vraiment télécharger la version {0} de mon CV ?",
     cancel: "Annuler",
     language: "fr",
@@ -180,7 +179,7 @@ export default {
         {
           title: "Inclusiv Academy",
           function: "Concepteur et développeur d’applications digitales",
-          contract: "Bootcamp",
+          contract: "Formation",
           date: "Octobre 2022 - Avril 2023",
           description:
             "- Projet Web : Conception et réalisation d’une application web avec React.js, Spring Boot et PostgreSQL. Cette plateforme met en relation directe les agriculteurs avec les clients finaux, améliorant ainsi la chaîne d’approvisionnement agricole.\n- Projet Desktop : Conception et développement d’une application desktop avec Visual Studio, WPF (.NET Framework, C#) et PostgreSQL. L’application facilite la mise en relation entre freelances et entreprises, optimisant le processus de recrutement.",
@@ -281,15 +280,53 @@ export default {
       portfolio: {
         title: "Heritiana Raveloson - Portfolio",
         type: "Projet Personnel",
-        description: "Version simplifiée du site de portfolio",
+        description: "Version simplifiée de mon site portfolio",
         techno: "React, Vite, Tailwind, EmailJs",
         link_1_desc: "Répertoire",
         link_2_desc: "Site du Portfolio",
       },
     },
   },
+  contact: {
+    title: "Contactez moi",
+    description:
+      "Un projet à développer ou un poste à pourvoir ? Discutons-en !",
+    location: "Localisation :",
+    Email: "Email :",
+    phone: "Numéro de téléphone :",
+    form: {
+      name: "Nom",
+      name_placeholder: "Votre nom...",
+      email: "Email",
+      email_placeholder: "Votre email...",
+      message: "Message",
+      message_placeholder: "Votre message...",
+      send: "Envoyer",
+    },
+  },
+  login: {
+    title: "Se connecter",
+    login: "Log in",
+    username: "Nom d'utilisateur",
+    username_placeholder: "Votre nom d'utilisateur...",
+    password: "Mot de passe",
+    password_placeholder: "Votre mot de passe...",
+    signup: "Pas encore connecté ?",
+  },
+  register: {
+    title: "S'inscrire",
+    username: "Nom d'utilisateur",
+    username_placeholder: "Votre nom d'utilisateur...",
+    email: "Email",
+    email_placeholder: "Votre email...",
+    password: "Mot de passe",
+    password_placeholder: "Votre mot de passe...",
+    confirm: "Confirmation du mot de passe",
+    confirm_placeholder: "Confirmez votre password...",
+    signin: "Déjà inscrit ?",
+  },
   not_found: {
-    title: "Oups ! Page non trouvée",
+    title: "Oups ! Page introuvable",
     description: "La page que vous recherchez n'existe pas ou a été déplacée.",
     return_home: "Retour à la page d'accueil",
   },

@@ -17,11 +17,15 @@ import Version from "./assets/version";
 import Cicd from "./assets/cicd";
 import Tools from "./assets/tools";
 import SkillCard from "./skill-card";
+import { motion } from "framer-motion";
+import PageNavigation from "@/src/components/ui/page-navigation";
 
 export default function Page() {
   const t = useI18n();
   const landingT = useScopedI18n("landing");
   const skillT = useScopedI18n("skills");
+  const resumeT = useScopedI18n("resume");
+  const worksT = useScopedI18n("works");
 
   const skills = [
     {
@@ -78,7 +82,15 @@ export default function Page() {
         </BreadcrumbList>
       </Breadcrumb>
 
-      <div className="flex flex-col gap-6 mx-auto py-8">
+      <motion.div
+        className="flex flex-col gap-6 mx-auto py-8"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.4,
+          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+        }}
+      >
         <h1 className="text-4xl font-bold text-foreground text-center border-6 border-foreground p-4 w-fit mx-auto mb-4">
           {skillT("title")}
         </h1>
@@ -87,7 +99,7 @@ export default function Page() {
           {skillT("description")}
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {skills.map(({ icon, titleKey, techKey }) => (
             <SkillCard
               key={titleKey}
@@ -97,7 +109,18 @@ export default function Page() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/resume",
+          label: resumeT("title"),
+        }}
+        right={{
+          href: "/portfolio/works",
+          label: worksT("title"),
+        }}
+      />
     </div>
   );
 }

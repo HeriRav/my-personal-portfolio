@@ -11,12 +11,17 @@ export default function Page() {
   useEffect(() => {
     const lenis = new Lenis();
 
-    function raf(time: number) {
+    const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    }
+    };
 
     requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+      document.documentElement.classList.remove("lenis");
+    };
   }, []);
 
   return (

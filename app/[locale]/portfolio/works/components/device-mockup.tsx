@@ -42,7 +42,7 @@ export default function DeviceMockup({
             className="w-full h-full object-contain"
             loading="eager"
           />
-          <div className="absolute left-1/2 top-2 -translate-x-1/2 w-24 h-4 bg-dark-accent rounded-full" />
+          <div className="absolute left-1/2 -top-1 -translate-x-1/2 w-36 h-5 bg-dark-accent rounded-b-full" />
           <div className="absolute left-1/2 bottom-1 -translate-x-1/2 w-28 h-1 bg-gray-100 rounded" />
         </div>
       </div>
