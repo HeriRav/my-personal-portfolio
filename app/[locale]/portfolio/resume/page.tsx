@@ -26,6 +26,7 @@ import { useI18n, useScopedI18n } from "@/locales/client";
 import ParticleBackground from "@/src/components/ui/particle-background";
 import { FileUser } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
+import PageNavigation from "@/src/components/ui/page-navigation";
 const en = "/download/en/Heritiana Raveloson(en).pdf";
 const fr = "/download/fr/Heritiana Raveloson(fr).pdf";
 
@@ -114,11 +115,23 @@ export default function Page() {
           </AlertDialog>
         </div>
       </div>
+
       <div className="lg:flex items-center justify-center 3xl:justify-start space-y-8 lg:space-y-0 md:gap-x-8 z-20 py-8">
         <ProfessionalResumeCard />
 
         <AcademicResumeCard />
       </div>
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/about",
+          label: landingT("about.title"),
+        }}
+        right={{
+          href: "/portfolio/skills",
+          label: landingT("search_result.skills.title"),
+        }}
+      />
     </div>
   );
 }

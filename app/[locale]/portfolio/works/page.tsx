@@ -27,6 +27,7 @@ import WorkSection from "./components/work-section";
 import { StaticImageData } from "next/image";
 import WorkLink from "./components/work-link";
 import { motion, useScroll } from "motion/react";
+import PageNavigation from "@/src/components/ui/page-navigation";
 
 type WorkLink = {
   href: string;
@@ -48,6 +49,8 @@ export default function Page() {
   const t = useI18n();
   const landingT = useScopedI18n("landing");
   const workT = useScopedI18n("works");
+  const skillsT = useScopedI18n("skills");
+  const contactT = useScopedI18n("contact");
 
   const isEn = workT("language") === "en";
 
@@ -241,6 +244,17 @@ export default function Page() {
           ))}
         </div>
       </div>
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/skills",
+          label: skillsT("title"),
+        }}
+        right={{
+          href: "/portfolio/contact",
+          label: contactT("title"),
+        }}
+      />
     </>
   );
 }

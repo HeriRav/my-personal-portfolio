@@ -18,11 +18,14 @@ import Cicd from "./assets/cicd";
 import Tools from "./assets/tools";
 import SkillCard from "./skill-card";
 import { motion } from "framer-motion";
+import PageNavigation from "@/src/components/ui/page-navigation";
 
 export default function Page() {
   const t = useI18n();
   const landingT = useScopedI18n("landing");
   const skillT = useScopedI18n("skills");
+  const resumeT = useScopedI18n("resume");
+  const worksT = useScopedI18n("works");
 
   const skills = [
     {
@@ -107,6 +110,17 @@ export default function Page() {
           ))}
         </div>
       </motion.div>
+
+      <PageNavigation
+        left={{
+          href: "/portfolio/resume",
+          label: resumeT("title"),
+        }}
+        right={{
+          href: "/portfolio/works",
+          label: worksT("title"),
+        }}
+      />
     </div>
   );
 }
