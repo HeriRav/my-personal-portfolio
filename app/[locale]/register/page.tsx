@@ -114,7 +114,10 @@ export default function Page() {
             </div>
             <p className="mx-auto">
               <span className="text-accent">{t("register.signin")} </span>
-              <Link href="/login" className="text-white hover:underline">
+              <Link
+                href="/login"
+                className="text-white underline hover:no-underline"
+              >
                 {t("login.title")}
               </Link>
             </p>
