@@ -1,5 +1,6 @@
 import { getI18n, getScopedI18n } from "@/locales/server";
 import Link from "next/link";
+import Image from "next/image";
 import { GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/src/components/ui/card";
 import ParticleBackground from "@/src/components/ui/particle-background";
@@ -12,6 +13,8 @@ import {
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb";
 import PageNavigation from "@/src/components/ui/page-navigation";
+import imgEuroi from "./assets/euroi.png";
+import imgInclusiv from "./assets/inclusiv.png";
 
 export default async function Page() {
   const t = await getI18n();
@@ -25,6 +28,7 @@ export default async function Page() {
       title: resumeT("master.title"),
       institution: resumeT("master.institution"),
       description: resumeT("master.description"),
+      img: imgInclusiv,
       side: "left",
     },
     {
@@ -32,6 +36,7 @@ export default async function Page() {
       title: resumeT("bachelor.title"),
       institution: resumeT("bachelor.institution"),
       description: resumeT("bachelor.description"),
+      img: imgEuroi,
       side: "right",
     },
   ];
@@ -90,24 +95,39 @@ export default async function Page() {
 
               {/* Carte */}
               <CardContent className="w-full rounded-xl border bg-card p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:dark:shadow-black">
-                <div className="flex items-center gap-2 mb-2">
-                  <GraduationCap className="w-4 h-4 text-secondary md:w-5 md:h-5" />
-                  <span className="text-xs md:text-sm font-semibold text-secondary">
-                    {item.year}
-                  </span>
+                <div className="flex flex-row items-start justify-between gap-2">
+                  <div className="flex min-w-0 flex-1 flex-col">
+                    <div className="flex items-center gap-2 mb-2">
+                      <GraduationCap className="w-4 h-4 text-secondary md:w-5 md:h-5" />
+                      <span className="text-xs md:text-sm font-semibold text-secondary">
+                        {item.year}
+                      </span>
+                    </div>
+
+                    <h3 className="text-base md:text-xl font-bold text-primary mb-1">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm md:text-base text-foreground font-medium mb-2">
+                      {item.institution}
+                    </p>
+
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {item.img && (
+                    <div className="flex ml-auto shrink-0 items-start justify-end md:mt-0">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        sizes="(max-width: 500px) 100vw, 500px"
+                        className="h-12 w-12 md:w-20 md:h-20 lg:w-32 lg:h-32 shrink-0 rounded-lg object-contain shadow-lg"
+                      />
+                    </div>
+                  )}
                 </div>
-
-                <h3 className="text-base md:text-xl font-bold text-primary mb-1">
-                  {item.title}
-                </h3>
-
-                <p className="text-sm md:text-base text-foreground font-medium mb-2">
-                  {item.institution}
-                </p>
-
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
               </CardContent>
             </div>
           ))}

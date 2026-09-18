@@ -202,7 +202,7 @@ export default function Page() {
             {workT("description")}
           </h2>
 
-          {works.map((work, index) => (
+          {works.reverse().map((work, index) => (
             <WorkSection
               key={work.name}
               desktopSrc={work.desktopSrc}

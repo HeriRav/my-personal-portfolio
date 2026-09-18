@@ -32,10 +32,10 @@ export default function PersonalInfo() {
       label: landingT("Email"),
       value: (
         <a
-          href="mailto:heriravel00@gmail.com"
+          href="mailto:heritiana.rav@gmail.com"
           className="text-primary hover:underline transition-all duration-150"
         >
-          heriravel00@gmail.com
+          heritiana.rav@gmail.com
         </a>
       ),
     },

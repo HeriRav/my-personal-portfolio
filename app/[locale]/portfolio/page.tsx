@@ -59,7 +59,7 @@ export default async function Page() {
               />
             ))}
           </div>
-          <div className="hidden lg:flex h-175 xl:h-165 w-px bg-dark-accent dark:bg-foreground mx-4"></div>
+          <div className="hidden lg:flex h-175 xl:h-167 w-px bg-dark-accent dark:bg-foreground mx-4" />
           <AboutMainPage />
         </div>
       </div>

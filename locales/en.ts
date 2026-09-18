@@ -78,7 +78,8 @@ export default {
       },
       contact: {
         title: "Contact",
-        description: "",
+        description:
+          "Got a project to develop or a position to fill? Let’s talk...",
       },
     },
   },
@@ -230,21 +231,21 @@ export default {
     language: "en",
     projects: {
       yta: {
-        title: "Eto.mg",
+        title: "Eto.mg (2021 - 2022)",
         type: "Internship",
         description:
           "Comprehensive real estate website designed to facilitate transactions.",
         techno: "Wordpress, PHP",
       },
       acm: {
-        title: "TCA(Airport Circular Title)",
+        title: "TCA(Airport Circular Title) (2022)",
         type: "Thesis Defense for Bachelor's Degree",
         description:
           "Web application for requesting a permanent Airport Circular Title.",
         techno: "C#, .NET, Visual Studio, SQL Server",
       },
       ia_1: {
-        title: "Samysamy",
+        title: "Samysamy (2022 - 2023)",
         type: "Exam Project",
         description:
           "Desktop application : Platform connecting freelancers and companies.",
@@ -252,7 +253,7 @@ export default {
         link_1_desc: "Repository",
       },
       ia_2: {
-        title: "Mihary'ket",
+        title: "Mihary'ket (2022 - 2023)",
         type: "Thesis Defense for Master's Degree",
         description: "Online sales platform for agricultural products.",
         techno: "React, Vite, Bootstrap, Spring Boot, PostgreSQL, Stripe",
@@ -260,15 +261,15 @@ export default {
         link_2_desc: "Backend Repository",
       },
       blender: {
-        title: "Blander - Donut",
+        title: "Blender - Doughnut (2023 - 2024)",
         type: "Personal Project",
         description:
-          "3D donut modeling project using Blender with Cycles render engine.",
+          "3D doughnut modeling project using Blender with Cycles render engine.",
         techno: "Blender, Cycles",
         link_1_desc: "Download .blend File (requires Blender)",
       },
       zeno: {
-        title: "Zeno - Landing Page",
+        title: "Zeno - Landing Page (2024 - 2025)",
         type: "Permanent Contract Mission",
         description: "Showcase site for Zeno.",
         techno:
@@ -276,7 +277,7 @@ export default {
         link_1_desc: "Zeno Official Website",
       },
       portfolio: {
-        title: "Heritiana Raveloson - Portfolio",
+        title: "Heritiana Raveloson - Portfolio (2024 - 2026)",
         type: "Personal Project",
         description: "Simplified version of my portfolio website",
         techno: "React, Vite, Tailwind, EmailJs",
@@ -286,11 +287,15 @@ export default {
     },
   },
   contact: {
-    title: "Contact Me",
+    title: "Contact",
     description: "Got a project to develop or a position to fill? Let’s talk!",
+    contact_me: "Contact Me",
     location: "Location :",
     email: "Email :",
     phone: "Phone number :",
+    my_location: "Antananarivo 103, Madagascar",
+    my_email: "heritiana.rav@gmail.com",
+    my_phone: "+261 34 77 768 96",
     form: {
       name: "Name",
       name_placeholder: "Your name...",

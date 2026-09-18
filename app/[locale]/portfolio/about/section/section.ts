@@ -51,7 +51,7 @@ export async function getSections() {
       heading: landingT("contact.title"),
       icon: Contact,
       href: "/portfolio/contact",
-      description: lorem,
+      description: landingT("contact.description"),
     },
   ];
 }

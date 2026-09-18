@@ -3,7 +3,7 @@
 import { Card, CardTitle, CardContent } from "@/src/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import ph_1 from "@/public/images/placeholder_1.jpg";
+import ph_1 from "@/public/images/profile_2.png";
 import { ArrowRight, Award, Calendar, GraduationCap } from "lucide-react";
 import { useScopedI18n } from "@/locales/client";
 
@@ -18,7 +18,7 @@ export function AcademicResumeCard() {
             src={ph_1}
             alt="Academic Picture"
             fill
-            className="object-cover"
+            className="object-contain bg-black"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
             loading="eager"
