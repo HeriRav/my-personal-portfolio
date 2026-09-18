@@ -3,7 +3,7 @@
 import { Card, CardTitle, CardContent } from "@/src/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import ph_2 from "@/public/images/placeholder_2.jpg";
+import ph_2 from "@/public/images/work.jpg";
 import { ArrowRight, Award, BriefcaseBusiness, Calendar } from "lucide-react";
 import { useScopedI18n } from "@/locales/client";
 

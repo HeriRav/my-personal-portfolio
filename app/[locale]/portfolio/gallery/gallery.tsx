@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/src/components/ui/card";
 import Image from "next/image";
-import ph_1 from "@/public/images/placeholder_1.jpg";
-import ph_2 from "@/public/images/placeholder_2.jpg";
-import ph_3 from "@/public/images/placeholder_3.jpg";
+import ph_1 from "@/public/images/profile_1.jpeg";
+import ph_2 from "@/public/images/profile_2.png";
+import ph_3 from "@/public/images/profile_3.png";
 
 export default function GalleryImage() {
   return (
@@ -13,7 +13,7 @@ export default function GalleryImage() {
             <Image
               src={ph_1}
               alt="ph-1"
-              className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
+              className="w-full h-68.5 xl:h-78 object-cover hover:scale-120 transition-all duration-300"
               fetchPriority="low"
               loading="eager"
             />
@@ -23,14 +23,17 @@ export default function GalleryImage() {
               <Image
                 src={ph_2}
                 alt="ph-2"
-                className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
+                className="w-full h-34 xl:h-38.5 object-cover object-bottom hover:scale-120 transition-all duration-300"
               />
             </div>
-            <div className="border-t overflow-hidden">
+            <div
+              className="border-t overflow-hidden"
+              style={{ backgroundColor: "#fff" }} //cfcfcf
+            >
               <Image
                 src={ph_3}
                 alt="ph-3"
-                className="w-full h-full object-cover hover:scale-120 transition-all duration-300"
+                className="w-full h-34 xl:h-38.5 object-contain hover:scale-120 transition-all duration-300"
               />
             </div>
           </div>
