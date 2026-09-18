@@ -79,7 +79,8 @@ export default {
       },
       contact: {
         title: "Contact",
-        description: "",
+        description:
+          "Un projet à développer ou un poste à pourvoir ? Discutons-en...",
       },
     },
   },
@@ -232,21 +233,21 @@ export default {
     language: "fr",
     projects: {
       yta: {
-        title: "Eto.mg",
+        title: "Eto.mg (2021 - 2022)",
         type: "Stage",
         description:
           "Site immobilier complet conçu pour faciliter les transactions.",
         techno: "Wordpress, PHP",
       },
       acm: {
-        title: "TCA (Titre de Circulation Aéroportuaire)",
+        title: "TCA (Titre de Circulation Aéroportuaire) (2022)",
         type: "Soutenance de Licence",
         description:
           "Application web pour la demande d’un Titre de Circulation Aéroportuaire permanent.",
         techno: "C#, .NET, Visual Studio, SQL Server",
       },
       ia_1: {
-        title: "Samysamy",
+        title: "Samysamy (2022 - 2023)",
         type: "Projet d'examen",
         description:
           "Application de bureau : plateforme reliant freelances et entreprises.",
@@ -254,7 +255,7 @@ export default {
         link_1_desc: "Répertoire",
       },
       ia_2: {
-        title: "Mihary'ket",
+        title: "Mihary'ket (2022 - 2023)",
         type: "Soutenance de Master",
         description: "Plateforme de vente en ligne de produits agricultures.",
         techno: "React, Vite, Bootstrap, Spring Boot, PostgreSQL, Stripe",
@@ -262,7 +263,7 @@ export default {
         link_2_desc: "Répertoire Backend",
       },
       blender: {
-        title: "Blander - Donut",
+        title: "Blender - Donut (2023 - 2024)",
         type: "Projet personnel",
         description:
           "Projet de modélisation 3D d’un donut avec Blender et le moteur de rendu Cycles.",
@@ -270,7 +271,7 @@ export default {
         link_1_desc: "Télécharger le fichier .blend (nécessite Blender)",
       },
       zeno: {
-        title: "Zeno - Site Vitrine",
+        title: "Zeno - Site Vitrine (2024 - 2025)",
         type: "Mission en CDI",
         description: "Site vitrine pour Zeno.",
         techno:
@@ -278,7 +279,7 @@ export default {
         link_1_desc: "Site officiel de Zeno",
       },
       portfolio: {
-        title: "Heritiana Raveloson - Portfolio",
+        title: "Heritiana Raveloson - Portfolio (2024 - 2026)",
         type: "Projet Personnel",
         description: "Version simplifiée de mon site portfolio",
         techno: "React, Vite, Tailwind, EmailJs",
@@ -288,12 +289,16 @@ export default {
     },
   },
   contact: {
-    title: "Contactez moi",
+    title: "Contact",
     description:
-      "Un projet à développer ou un poste à pourvoir ? Discutons-en !",
+      "Un projet à développer ou un poste à pourvoir ? Discutons-en!",
+    contact_me: "Contactez-moi",
     location: "Localisation :",
-    Email: "Email :",
+    email: "Email :",
     phone: "Numéro de téléphone :",
+    my_location: "Antananarivo 103, Madagascar",
+    my_email: "heritiana.rav@gmail.com",
+    my_phone: "+261 34 77 768 96",
     form: {
       name: "Nom",
       name_placeholder: "Votre nom...",
