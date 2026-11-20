@@ -26,10 +26,7 @@ export default function GalleryImage() {
                 className="w-full h-34 xl:h-38.5 object-cover object-bottom hover:scale-120 transition-all duration-300"
               />
             </div>
-            <div
-              className="border-t overflow-hidden"
-              style={{ backgroundColor: "#fff" }} //cfcfcf
-            >
+            <div className="border-t overflow-hidden bg-black dark:bg-white">
               <Image
                 src={ph_3}
                 alt="ph-3"
