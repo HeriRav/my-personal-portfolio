@@ -45,7 +45,7 @@ export default async function Page() {
           </div>
         </div>
         <div className="h-px w-full bg-linear-to-r from-transparent via-dark-accent to-transparent dark:bg-linear-to-r dark:from-transparent dark:via-foreground dark:to-transparent my-6"></div>
-        <div className="flex flex-col-reverse lg:flex-row my-8">
+        <div className="flex flex-col-reverse lg:flex-row lg:items-start my-8">
           <div className="max-w-237.5 w-full">
             {sections.map((section) => (
               <SectionItem
@@ -59,7 +59,6 @@ export default async function Page() {
               />
             ))}
           </div>
-          <div className="hidden lg:flex h-175 xl:h-167 w-px bg-dark-accent dark:bg-foreground mx-4" />
           <AboutMainPage />
         </div>
       </div>
