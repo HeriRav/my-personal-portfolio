@@ -35,7 +35,7 @@ export default {
       title: "Biographie",
       developer: "Développeur logiciel",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius deleniti consequuntur sit incidunt quae ex temporibus expedita id nostrum. Atque, earum! Repellendus possimus quibusdam cupiditate labore, tempore earum sed!",
+        "Heritiana Raveloson, né le 27 Novembre 1997 à Antananarivo, Madagascar, je suis un développeur logiciel passionné par l’innovation et les nouveaux défis. Diplômé en licence à l'université EUROI (Espace Universitaire Régional de l’Océan Indien), j'ai rapidement intégré le monde professionnel, développant mes compétences au quotidien. Spécialisé dans le développement front-end avec des connaissances en back-end, je conçoit des interfaces utilisateur intuitives et performantes. Mon expertise en JavaScript/TypeScript et Java me permet de transformer des idées créatives en applications web réactives.",
     },
     about: {
       title: "À propos de moi",
@@ -62,27 +62,37 @@ export default {
         "Interface utilisateur inspirée du moteur de recherche Google - non affiliée à Google.",
     },
     search_result: {
+      about: {
+        title: "À propos",
+        description:
+          "Heritiana Raveloson, né le 27 Novembre 1997 à Antananarivo, Madagascar, je suis un développeur logiciel passionné par l’innovation et les nouveaux défis. Diplômé en licence à l'université EUROI (Espace Universitaire Régional de l’Océan Indien), j'ai rapidement intégré le monde professionnel, développant mes compétences au quotidien. Spécialisé dans le développement front-end avec des connaissances en back-end, je conçoit des interfaces utilisateur intuitives et performantes. Mon expertise en JavaScript/TypeScript et Java me permet de transformer des idées créatives en applications web réactives.",
+      },
       resume: {
         title: "Parcours",
         description:
-          "Mon parcours professionnel et académique. Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien...",
+          "Mon parcours professionnel et académique. Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien. Mon expérience la plus récente est en tant que développeur logiciel chez Zeno Inno, où je crée des interfaces utilisateur dynamiques avec React et j’intègre des composants réutilisables avec Tailwind CSS. Je collabore étroitement avec les équipes produit pour améliorer l’expérience utilisateur. Mon dernier diplôme est une certification RNCP niveau 6, équivalente à une première année de Master, obtenue à l’Inclusiv Academy.",
       },
       skills: {
         title: "Compétences",
         description:
-          "Mes compétences. Un aperçu de mes compétences techniques et de mon expertise...",
+          "Mes compétences. Un aperçu de mes compétences techniques et de mon expertise. Front-end: JavaScript/TypeScript, Back-end: Java/Node.js, Gestion de base de données SQL, Gestion de version avec GitHub, CI/CD et Outils.",
       },
       works: {
         title: "Réalisations",
         description:
-          "Mes réalisations et projets. Une vitrine de mes réalisations et projets...",
+          "Mes réalisations et projets. Une vitrine de mes réalisations et projets. Portfolio (2024 - 2026): Version simplifiée de mon site portfolio. Zeno - Page d'accueil (2024 - 2025): Site vitrine pour Zeno. Blender - Donut (2023 - 2024): Modélisation d’un donut 3D avec Blender et moteur de rendu Cycles. Mihary'ket (2022 - 2023): Plateforme de vente en ligne de produits agricoles. Samysamy (2022 - 2023): Application de bureau : plateforme reliant freelances et entreprises. TCA(Titre de Circulation Aéroportuaire) (2022): Application web pour la demande d’un Titre de Circulation Aéroportuaire permanent. Eto.mg (2021 - 2022): Site immobilier complet conçu pour faciliter les transactions.",
       },
       contact: {
         title: "Contact",
         description:
-          "Un projet à développer ou un poste à pourvoir ? Discutons-en...",
+          "Un projet à développer ou un poste à pourvoir ? Discutons-en. Localisation: Antananarivo 103, Madagascar. Email: heritiana.rav@gmail.com. Phone: +261 34 77 768 96. LinkedIn: https://www.linkedin.com/in/heritiana-raveloson-564347236/. GitHub: https://github.com/heritiana-raveloson",
       },
     },
+  },
+  about_page: {
+    title: "À propos",
+    description:
+      "Heritiana Raveloson, né le 27 Novembre 1997 à Antananarivo, Madagascar, je suis un développeur logiciel passionné par l’innovation et les nouveaux défis. Diplômé en licence à l'université EUROI (Espace Universitaire Régional de l’Océan Indien), j'ai rapidement intégré le monde professionnel, développant mes compétences au quotidien. Spécialisé dans le développement front-end avec des connaissances en back-end, je conçoit des interfaces utilisateur intuitives et performantes. Mon expertise en JavaScript/TypeScript et Java me permet de transformer des idées créatives en applications web réactives.",
   },
   resume: {
     title: "Mon Parcours",
@@ -90,7 +100,7 @@ export default {
     sub_description:
       "Depuis l’obtention de mon diplôme, je suis rapidement entré dans le monde professionnel, ce qui me permet de développer mes compétences au quotidien.",
     download: "Télécharger mon CV",
-    confirm: "Voulez-vous vraiment télécharger la version {0} de mon CV ?",
+    confirm: "Voulez-vous télécharger la version {0} de mon CV ?",
     cancel: "Annuler",
     language: "fr",
     academic: {
@@ -204,7 +214,7 @@ export default {
     description: "Un aperçu de mes compétences techniques et de mon expertise",
     frontend: {
       title: "Front-end",
-      tech: "React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
+      tech: "JavaScript, React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
     },
     backend: {
       title: "Back-end",
@@ -296,17 +306,33 @@ export default {
     location: "Localisation :",
     email: "Email :",
     phone: "Numéro de téléphone :",
+    network: "Réseaux :",
     my_location: "Antananarivo 103, Madagascar",
     my_email: "heritiana.rav@gmail.com",
     my_phone: "+261 34 77 768 96",
+    linkdin: "LinkedIn",
+    github: "GitHub",
     form: {
       name: "Nom",
       name_placeholder: "Votre nom...",
       email: "Email",
       email_placeholder: "Votre email...",
+      phone: "Numéro de téléphone",
+      phone_placeholder: "Votre numéro de téléphone...",
       message: "Message",
       message_placeholder: "Votre message...",
-      send: "Envoyer",
+      loading: "Chargement...",
+      submit: "Envoyer",
+      word_count: "mots",
+    },
+    toast: {
+      success: "Votre message a été envoyé avec succès !",
+      error:
+        "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+      warn: {
+        empty_fields: "Tous les champs sont obligatoires",
+        invalid_email: "Veuillez entrer une adresse email valide",
+      },
     },
   },
   login: {

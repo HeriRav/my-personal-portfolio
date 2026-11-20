@@ -24,7 +24,7 @@ import { AcademicResumeCard } from "./academic/academic-resume-card";
 import { ProfessionalResumeCard } from "./professional/professional-resume-card";
 import { useI18n, useScopedI18n } from "@/locales/client";
 import ParticleBackground from "@/src/components/ui/particle-background";
-import { FileUser } from "lucide-react";
+import { Download, FileUser } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
 import PageNavigation from "@/src/components/ui/page-navigation";
 const en = "/download/en/Heritiana Raveloson(en).pdf";
@@ -107,6 +107,7 @@ export default function Page() {
                 {/* Confirmation = téléchargement */}
                 <AlertDialogAction asChild>
                   <Link href={resumeUrl} download={fileName}>
+                    <Download />
                     {resumeT("download")}
                   </Link>
                 </AlertDialogAction>

@@ -19,7 +19,7 @@ const SkillCard = ({ icon, title, tech }: SkillCardProps) => {
           {tech.split(",").map((t, i) => (
             <span
               key={i}
-              className="px-3 py-1 bg-secondary/10 border border-secondary rounded-full text-sm text-foreground/80 cursor-default"
+              className="px-3 py-1 bg-secondary/10 border border-secondary rounded-md text-sm text-foreground/80 cursor-default"
             >
               {t.trim()}
             </span>
