@@ -35,7 +35,7 @@ export default {
       title: "Biograpy",
       developer: "Software developer",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius deleniti consequuntur sit incidunt quae ex temporibus expedita id nostrum. Atque, earum! Repellendus possimus quibusdam cupiditate labore, tempore earum sed!",
+        "Heritiana Raveloson, born on November 27, 1997 in Antananarivo, Madagascar, I am a software developer passionate about innovation and new challenges. Graduated with a bachelor's degree from EUROI University (Regional University Space of the Indian Ocean), I quickly entered the professional world, developing my skills on a daily basis. Specialized in front-end development with back-end knowledge, I design intuitive and high-performance user interfaces. My expertise in JavaScript/TypeScript and Java allows me to transform creative ideas into responsive web applications.",
     },
     about: {
       title: "About me",
@@ -61,27 +61,37 @@ export default {
         "UI inspired by Google search engine - not affiliated with Google.",
     },
     search_result: {
+      about: {
+        title: "About",
+        description:
+          "Heritiana Raveloson, born on November 27, 1997 in Antananarivo, Madagascar, I am a software developer passionate about innovation and new challenges. Graduated with a bachelor's degree from EUROI University (Regional University Space of the Indian Ocean), I quickly entered the professional world, developing my skills on a daily basis. Specialized in front-end development with back-end knowledge, I design intuitive and high-performance user interfaces. My expertise in JavaScript/TypeScript and Java allows me to transform creative ideas into responsive web applications.",
+      },
       resume: {
         title: "Resume",
         description:
-          "My professional and academic journey. Since graduating, I have quickly entered the professional world, which allows me to develop my skills on a daily basis...",
+          "My professional and academic journey. Since graduating, I have quickly entered the professional world, which allows me to develop my skills on a daily basis. My latest experience is as a software developer at Zeno Inno, where I create dynamic user interfaces with React and integrate reusable components using Tailwind CSS. I work closely with product teams to improve user experience. My latest degree is a RNCP Level 6 certification, equivalent to the first year of a Master's degree, obtained from Inclusiv Academy.",
       },
       skills: {
         title: "Skills",
         description:
-          "My skills. A showcase of my technical skills and expertise...",
+          "My skills. A showcase of my technical skills and expertise. Front-end: JavaScript/TypeScript, Back-end: Java/Node.js, Database Management SQL, Version Control with GitHub, CI/CD, and Tools.",
       },
       works: {
         title: "Works",
         description:
-          "My works and projetcs. A showcase of my works and projects...",
+          "My works and projects. A showcase of my works and projects. Portfolio (2024 - 2026): Simplified version of my portfolio website. Zeno - Landing Page (2024 - 2025): Showcase site for Zeno. Blender - Doughnut (2023 - 2024): 3D doughnut modeling project using Blender with Cycles render engine. Mihary'ket (2022 - 2023): Online sales platform for agricultural products. Samysamy (2022 - 2023): Desktop application: Platform connecting freelancers and companies. TCA(Airport Circular Title) (2022): Web application for requesting a permanent Airport Circular Title. Eto.mg (2021 - 2022): Comprehensive real estate website designed to facilitate transactions.",
       },
       contact: {
         title: "Contact",
         description:
-          "Got a project to develop or a position to fill? Let’s talk...",
+          "Got a project to develop or a position to fill? Let’s talk. Location: Antananarivo 103, Madagascar. Email: heritiana.rav@gmail.com. Phone: +261 34 77 768 96. LinkedIn: https://www.linkedin.com/in/heritiana-raveloson-564347236/. GitHub: https://github.com/heritiana-raveloson",
       },
     },
+  },
+  about_page: {
+    title: "About",
+    description:
+      "Heritiana Raveloson, born on November 27, 1997 in Antananarivo, Madagascar, I am a software developer passionate about innovation and new challenges. Graduated with a bachelor's degree from EUROI University (Regional University Space of the Indian Ocean), I quickly entered the professional world, developing my skills on a daily basis. Specialized in front-end development with back-end knowledge, I design intuitive and high-performance user interfaces. My expertise in JavaScript/TypeScript and Java allows me to transform creative ideas into responsive web applications.",
   },
   resume: {
     title: "My Resume",
@@ -89,7 +99,7 @@ export default {
     sub_description:
       "Since graduating, I have quickly entered the professional world, allowing me to develop my skills on a daily basis.",
     download: "Download Resume",
-    confirm: "Do you really want to download the {0} version of my resume ?",
+    confirm: "Do you want to download the {0} version of my resume ?",
     cancel: "Cancel",
     language: "en",
     academic: {
@@ -202,7 +212,7 @@ export default {
     description: "A showcase of my technical skills and expertise",
     frontend: {
       title: "Front-end",
-      tech: "React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
+      tech: "JavaScript, React, Next, Gatsby, Tailwind CSS, Shadcn/ui, TypeScript",
     },
     backend: {
       title: "Back-end",
@@ -293,19 +303,33 @@ export default {
     location: "Location :",
     email: "Email :",
     phone: "Phone number :",
+    network: "Network :",
     my_location: "Antananarivo 103, Madagascar",
     my_email: "heritiana.rav@gmail.com",
     my_phone: "+261 34 77 768 96",
+    linkdin: "LinkedIn",
+    github: "GitHub",
     form: {
       name: "Name",
       name_placeholder: "Your name...",
-      phone: "Phone number",
-      phone_placeholder: "Your phone number...",
       email: "Email",
       email_placeholder: "Your email...",
+      phone: "Phone number",
+      phone_placeholder: "Your phone number...",
       message: "Message",
       message_placeholder: "Your message...",
-      send: "Send",
+      loading: "Loading...",
+      submit: "Submit",
+      word_count: "words",
+    },
+    toast: {
+      success: "Your message has been sent successfully!",
+      error:
+        "An error occurred while sending your message. Please try again later.",
+      warn: {
+        empty_fields: "All fields are required",
+        invalid_email: "Please enter a valid email address",
+      },
     },
   },
   login: {
